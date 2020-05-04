@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Engine Cycle Overview</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj476 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:70px;width:400px;height:71px;}
+#Oobj487 {position:absolute;z-index:2;visibility:visible;text-align:left;left:208px;top:122px;width:764px;height:1624px;background-color:#ffffff;border-width:5px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj43 {position:absolute;z-index:7;visibility:visible;text-align:left;left:254px;top:1729px;width:720px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj476">
+<div id="Ggeo349" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Engine Cycle Overview<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj487">
+<div id="Ggeo356" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">A story is a sequence of events.&nbsp; In Storytronics, an </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event </font><font face="Bookman Old Style" class="fsx04">always includes a </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">.&nbsp; When the story engine encounters an </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">, it hands an imaginary envelope (the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">) to each of the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> in turn:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t3-a.jpg" width="567" height="131"></center><br>
+<center><img src="images/t3-b.jpg" width="567" height="126"></center><br>
+<center><img src="images/t3-c.jpg" width="567" height="125"></center><br>
+<br>
+<img src="images/t3-d.jpg" width="229" height="177" align="right" hspace="5">The envelope contains a group of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Roles</font><font face="Bookman Old Style" class="fsx04"> for who can respond and how they respond:<br>
+<br>
+<br clear="all"><br>
+<img src="images/t3-e.jpg" width="251" height="210" align="right" hspace="5">Each </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> specifies:<ul>
+<li>the conditions under which an Actor may assume that Role
+<li>the emotional reactions of an Actor taking that Role
+<li>a group of Options for that Actor for reacting to the Event</ul></font><br>
+<font face="Bookman Old Style" class="fsx04">Each </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> considers that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> and, if that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> meets the conditions defined on the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> envelope, then that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> executes the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">, opening up its envelope to see the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Options</font><font face="Bookman Old Style" class="fsx04"> inside.</font><br>
+<font face="Bookman Old Style" class="fsx04"><br clear="all"><br>
+<img src="images/t3-f.jpg" width="232" height="79" align="right" hspace="5">Each </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> specifies:<ul>
+<li>which WordSockets will be used construct the sentence for that Option
+<li>the rules for what words will be chosen to fill those WordSockets
+<li>the Inclination of the Actor towards executing that Option</ul><br>
+In turn, each witnessing </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> considers the list of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Roles</font><font face="Bookman Old Style" class="fsx04"> and assumes one of them if appropriate.&nbsp; An </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> assuming a </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> becomes the “ReactingActor” for the subsequent </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> calculations. <br>
+<br>
+Within that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">, a </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> chooses the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04">for which s/he has the </font><font face="Bookman Old Style" class="fsx04">highest Inclination. That chosen </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> becomes a </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Plan</font><font face="Bookman Old Style" class="fsx04">.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#00c0ff">Plans</font><font face="Bookman Old Style" class="fsx04"> are later executed by the Engine, becoming </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Events</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+The cycle begins again.<br>
+<br>
+Many complications, but this is the basic idea.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">As you can see, one </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> can be pretty complicated in terms of all the decisions to be made by the story engine.&nbsp; Fortunately for the player, most of that is invisible.&nbsp; For you, the author, your job is to define the possible </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Roles</font><font face="Bookman Old Style" class="fsx04">, reactions, and </font><font face="Bookman Old Style" class="fsx04" color="#008000">Options</font><font face="Bookman Old Style" class="fsx04"> for the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> that will be triggered by the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">.&nbsp; The </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> Editor is the tool that will help you build all of this.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><hr><br></font><div align="center"><font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-a-02-getting-started.html">Getting Started</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-a-04-verbs.html">Verbs</a><br><br></div></font><div align="left"><font face="Bookman Old Style" class="fsx04"><hr><br></font></div>
+</div>
+</div>
+
+
+<div id="Oobj456">
+<img name="Ggeo288" src="http://www.storytron.com/Tutorial/geometry/obj456geo288shd7p407.jpg" alt="" border = "0"  width="775" height="28"></div>
+
+<div id="Oobj457">
+<div id="Ggeo289" class="dfltt">
+<div align="center"><font face="Bookman Old Style" color="#ffffff"><a href="index.html" class="txdec"><font class="txdec" color="#f9f3ee">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/sitemap.html" class="txdec"><font class="txdec" color="#f9f3ee">SiteMap</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/feedback.html" class="txdec"><font class="txdec" color="#f9f3ee">Feedback</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/faq.html" class="txdec"><font class="txdec" color="#f9f3ee">FAQ</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/pressroom.html" class="txdec"><font class="txdec" color="#ffffff">Press Room</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/privacy-policy.html" class="txdec"><font class="txdec" color="#ffffff">Privacy Policy</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/ipb/index-54403.html" target="_blank" class="txdec"><font class="txdec" color="#ffffff">Login</font></a><br></font></div>
+</div>
+</div>
+
+<div id="Oobj459">
+<img name="Ggeo290" src="http://www.storytron.com/Tutorial/geometry/obj459geo290shd8p407.jpg" alt="" border = "0"  width="775" height="28"></div>
+
+
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

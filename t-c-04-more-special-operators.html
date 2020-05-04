@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - More Special Operators</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj30 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:66px;width:400px;height:71px;}
+#Oobj31 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:119px;width:767px;height:3162px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj63 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:3240px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj30">
+<div id="Ggeo82" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+More Special Operators<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj31">
+<div id="Ggeo83" class="dfltt">
+<font face="Bookman Old Style" class="fsx04"><B>Bigger, Smaller</B><br>
+These are simple Operators; they simply return the bigger or smaller of two </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumbers</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+<B>PickUpperIf</B><br>
+This Operator has three arguments: </font><font face="Bookman Old Style" class="fsx04">a Boolean to decide whether or not to pick the </font><font face="Bookman Old Style" class="fsx04">upper </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04">, an upper </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04">, and a lower </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04">. Here's a quick example:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">PickUpperIf of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; TopGreaterThanBottom(BNumber)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Nasty_Nice of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Nasty_Nice of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.5<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 0.0</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This will return a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.5</font><font face="Bookman Old Style" class="fsx04"> if </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> is nicer than </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><font face="Bookman Old Style" class="fsx04">; otherwise, it will return </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04">. This is handy for situations where you must make an abrupt choice between two possibilities based on some yes-or-no factor. It can be used in cases where the author wants one </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> to override all the others under a special circumstance. An example of such an Inclination Script might look like this:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">PickUpperIf of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SpecialCircumstance</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maxi<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mini</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">(</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Maxi </font><font face="Bookman Old Style" class="fsx04">and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini </font><font face="Bookman Old Style" class="fsx04">are </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber </font><font face="Bookman Old Style" class="fsx04">constants.&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Maxi </font><font face="Bookman Old Style" class="fsx04">= </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.999 </font><font face="Bookman Old Style" class="fsx04">and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini</font><font face="Bookman Old Style" class="fsx04"> = </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.999</font><font face="Bookman Old Style" class="fsx04">)&nbsp; <br>
+<br>
+This would insure that the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> was a shoo-in when SpecialCircumstance was true, but otherwise was out of the running.<br>
+<br>
+<br>
+<B>Actor@Sum</B><br>
+<br>
+You can use this Operator to add up the </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attribute</font><font face="Bookman Old Style" class="fsx04"> (or perceived </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attribute</font><font face="Bookman Old Style" class="fsx04">) values of all the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> towards one </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">. For example, suppose you want to find out how trusted </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04"> is by the female </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+First, go to the Actor Editor and click the far right green plus sign to add a trait. Name the new trait </font><font face="Bookman Old Style" class="fsx04" color="#006080">Faithless_Honest</font><font face="Bookman Old Style" class="fsx04">. Unclick the check box to the right of the trait. This means the trait is not readily detectable when two </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> meet (an example of a visible/detectable trait would be </font><font face="Bookman Old Style" class="fsx04" color="#006080">Short_Tall</font><font face="Bookman Old Style" class="fsx04">. An example of an invisible or non-detectable trait would be </font><font face="Bookman Old Style" class="fsx04" color="#006080">Cowardly_Courageous</font><font face="Bookman Old Style" class="fsx04">). Then return to the Verb editor and choose any Desirable or Inclination script. <br>
+<br>
+Now highlight a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04"> term and then select </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Actor@Sum</font><font face="Bookman Old Style" class="fsx04"> from the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> menu, and fill out the other terms to get this: </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Actor@Sum of: </font><font face="Bookman Old Style" class="fsx04"> <br>
+&nbsp;&nbsp;&nbsp;&nbsp; Female of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PFaithless_Honest of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This would add up all the female </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">' </font><font face="Bookman Old Style" class="fsx04" color="#006080">PFaithless_Honest</font><font face="Bookman Old Style" class="fsx04"> values towards </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04">. Note that the first term, the Boolean, allows you to filter out </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> based on whatever acceptability criteria you choose. <br>
+<br>
+<br>
+<B>Prop@Sum, Stage@Sum, Event@Sum</B><br>
+<br>
+These Operators function for </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Props</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Stages</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Events</font><font face="Bookman Old Style" class="fsx04">, respectively, in the same way that </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Actor@Sum</font><font face="Bookman Old Style" class="fsx04"> does for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+<br>
+<B>Actor@Average, Prop@Average, Stage@Average, Event@Average</B><br>
+<br>
+These four Operators behave the same way as their </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">____@Sum </font><font face="Bookman Old Style" class="fsx04">counterparts, except that they return the average values of the given </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attributes</font><font face="Bookman Old Style" class="fsx04">, rather than their totals.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Actor@Tally, Prop@Tally, Stage@Tally, Event@Tally</B></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">These Operators use regular numbers, rather than </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumbers</font><font face="Bookman Old Style" class="fsx04">. They count up the number of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Props</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Stages</font><font face="Bookman Old Style" class="fsx04">, or </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Events</font><font face="Bookman Old Style" class="fsx04"> that meet a set of criteria you specify. You can then convert them to </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumbers</font><font face="Bookman Old Style" class="fsx04"> and use them in your scripts.<br>
+<br>
+Suppose you want to have the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> make a decision on whether to confront a bully or defer the confrontation based on how many allies he or she has. The inclination script might look something like this:</font><br>
+<br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Number2BNumber of:</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#800000">Actor@Tally of:</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">TopGreaterThanBottom(BNumber)</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PEnemy_Ally of:</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.2</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#800000">Actor@Tally</font><font face="Bookman Old Style" class="fsx04"> (we pronounce these operators, by the way, as for instance "ActorTally"</font><font face="Bookman Old Style" class="fsx04">&#8212;</font><font face="Bookman Old Style" class="fsx04">that is, with a silent "@"</font><font face="Bookman Old Style" class="fsx04">&#8212;</font><font face="Bookman Old Style" class="fsx04">reduces the tongue tangles) in the above script counts the number of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> whose perception of how allied the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> is to them (that is, their </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PEnemy_Ally </font><font face="Bookman Old Style" class="fsx04">value for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">) is at least medium-large (i.e., greater than </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.2</font><font face="Bookman Old Style" class="fsx04">), and gives you a numerical count from </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0</font><font face="Bookman Old Style" class="fsx04"> to the total number of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> in your storyworld (let's call it 4). <br>
+<br>
+Using the Operator Number2BNumber converts this result to a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04"> (all Desirable and Inclination scripts must result in a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04">). Applying the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04"> magic, 4 allies translates into a willingness to confront the bully of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.8</font><font face="Bookman Old Style" class="fsx04">. Since the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04"> range is about</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> -0.9999 </font><font face="Bookman Old Style" class="fsx04">to </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.9999</font><font face="Bookman Old Style" class="fsx04">, if you have four allies,</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> 0.8 </font><font face="Bookman Old Style" class="fsx04">is pretty high on the scale. A confrontation with the bully is a pretty likely scenario! <br>
+<br>
+You might want to tune this script to make it less sensitive to the number of allies. Let's say you want to make it so your </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> will only confront the bully if he or she has lots of allies. To do so, you can divide the </font><font face="Bookman Old Style" class="fsx04" color="#800000">Actor@Tally</font><font face="Bookman Old Style" class="fsx04"> by, say, </font><font face="Bookman Old Style" class="fsx04" color="#800000">10.0</font><font face="Bookman Old Style" class="fsx04">. It would look like this:</font><br>
+<br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Number2BNumber of:</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#800000">quotient of:</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#800000">Actor@Tally of:</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">TopGreaterThanBottom(BNumber)</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PEnemy_Ally of:</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.2</font><br>
+<font face="Times New Roman" class="fsx04" color="#800000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#800000">10.0</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">It would take a lot more Allies to make </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> confront the bully. If </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> has four allies, this script ends up with</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> 0.29 </font><font face="Bookman Old Style" class="fsx04">for Inclination. This script makes a confrontation less likely than the first script above. <br>
+<br>
+Play around with different values for the divisor, and watch what happens in Scriptalyzer to the likelihood of this </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> being taken (For extra credit, see if you can make the script take into account to the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor'</font><font face="Bookman Old Style" class="fsx04">s personal courage. Hint: the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">'s courage affects how many allies he or she will want, in order to feel safe).</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>PickBest___</B><br>
+<br>
+This is one of the most powerful Operators in Sappho. It will pick the best </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Prop</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Stage</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#006080">ActorTrait</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#006080">PropTrait</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#006080">StageTrait</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#006080">MoodTrait</font><font face="Bookman Old Style" class="fsx04">, or </font><font face="Bookman Old Style" class="fsx04" color="#400080">Quantifier</font><font face="Bookman Old Style" class="fsx04"> depending upon your specifications. And what are your specifications? Nothing more than the same Acceptable and Desirable subscripts that you use for </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSockets</font><font face="Bookman Old Style" class="fsx04">! Here's an example:<br>
+<br>
+Suppose we want to pick the </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Prop</font><font face="Bookman Old Style" class="fsx04"> that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> owns that is most lethal. This would be good if </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> is preparing for a fight.<br>
+<br>
+In the Desirable script choose CorrespondingPropTrait, and then for the PropTrait, select PickBestProp under Picking in the Operator menu.&nbsp; Here's how the script looks:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">CorrespondingPropTrait of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Candidate Prop</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">PickBestPropTrait of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Owner of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">CandidateProp</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Harmless_Lethal of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">CandidateProp</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">There will be times when your PickBest___ Operator fails to find anything at all. For example, in the above script, if the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> doesn't own any </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Props </font><font face="Bookman Old Style" class="fsx04">at all, then PickBestProp will not find anything to return. In this case, PickBestProp will generate <a href="t-d-02-poison.html">Poison</a> that will eliminate the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> from consideration.</font><br>
+<br>
+<font face="Bookman Old Style"><hr></font><font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-c-03-historybook-operators.html">HistoryBook Operators</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br><div align="right">This is the last tutorial in this group.&nbsp; The next group, <B>Advanced Topics</B>, begins with <a href="t-d-01-whos-fate.html">Who's Fate? (part 1)</a> <br><br></div></font><div align="left"><font face="Bookman Old Style"><hr><br></font></div>
+</div>
+</div>
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

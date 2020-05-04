@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Hijacking</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj468 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:66px;width:400px;height:71px;}
+#Oobj469 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:122px;width:766px;height:1636px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj52 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:1697px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj468">
+<div id="Ggeo314" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Hijacking<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj469">
+<div id="Ggeo56" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">There are sometimes situations in which you might want to have several </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> reacting to an </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">. Sometimes you'll want them all to act, but sometimes you'll want the action of one </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> to block the actions of others. For example, if somebody shouts, "There's fire in the kitchen!" and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">John</font><font face="Bookman Old Style" class="fsx04"> reacts to the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> by dousing the fire, you don't want somebody else to douse the fire as well; one dousing will do. <br>
+<br>
+To demonstrate this, we need a third </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">. Go to the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> Editor and create a new </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04">. Set her location to </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Joe's Bar</font><font face="Bookman Old Style" class="fsx04">, then return to the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> Editor. Let's say that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> is your (</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04">'s) girlfriend, and she doesn't like to see people beat you up. So, if somebody (say, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04">) uses "</font><font face="Bookman Old Style" class="fsx04" color="#008000">hit with</font><font face="Bookman Old Style" class="fsx04">" on </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04">, then </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> should intervene by pleading with </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04"> to desist.<br>
+<br>
+So first we must create the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> "</font><font face="Bookman Old Style" class="fsx04" color="#008000">plead to desist</font><font face="Bookman Old Style" class="fsx04">."&nbsp; Click on the "your first category," then click the Verbs tab and choose "New Verb."&nbsp; (You can also right-click, or control-click on Mac, anywhere in the pink column.)&nbsp; <br>
+<br>
+<center><img src="images/t13-a.jpg" width="480" height="169"></center><br>
+<br>
+In the Properties box, add a </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">3Actor</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> for the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04">.&nbsp; Now go back to "</font><font face="Bookman Old Style" class="fsx04" color="#008000">hit with</font><font face="Bookman Old Style" class="fsx04">" and create a new </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">; let's call it "</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">girlfriend</font><font face="Bookman Old Style" class="fsx04">." Now, we could get clever here and create an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attribute</font><font face="Bookman Old Style" class="fsx04"> that specifies just who is hitched up with whom, but in this case, there's a shortcut: </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> is the only female here, so let's take advantage of that. However, there's another problem: we don't want </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> to plead with </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04"> if </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">hits</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04">; we want her to plead with </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04"> if </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred </font><font face="Bookman Old Style" class="fsx04" color="#008000">hits</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04">. For the AssumeRoleIf Script, just use:<br>
+<br>
+AND<br>
+&nbsp;&nbsp; NOT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Male<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp; AreSameActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fred</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">"Male" is found in the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> menu.<br>
+<br>
+Now let's give </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> to </font><font face="Bookman Old Style" class="fsx04" color="#008000">plead</font><font face="Bookman Old Style" class="fsx04"> with </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04">. Click once on the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> "</font><font face="Bookman Old Style" class="fsx04" color="#008000">plead to desist</font><font face="Bookman Old Style" class="fsx04">" in the left column and then click the green "+" plus button next to the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Options</font><font face="Bookman Old Style" class="fsx04"> box. That adds "</font><font face="Bookman Old Style" class="fsx04" color="#008000">plead to desist</font><font face="Bookman Old Style" class="fsx04">" to the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> list for the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> "</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">girlfriend</font><font face="Bookman Old Style" class="fsx04">." <br>
+<br>
+Next fill in the two Scripts for the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">. They're quite simple; you want </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> to plead with the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Subject</font><font face="Bookman Old Style" class="fsx04"> of "</font><font face="Bookman Old Style" class="fsx04" color="#008000">hit with</font><font face="Bookman Old Style" class="fsx04">"</font><font face="Bookman Old Style" class="fsx04">&#8212;</font><font face="Bookman Old Style" class="fsx04">whomever did the </font><font face="Bookman Old Style" class="fsx04" color="#008000">hitting</font><font face="Bookman Old Style" class="fsx04">: <br>
+<br>
+Acceptable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CandidateActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tom</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Note the second comparison, establishing that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04"> is the one who was </font><font face="Bookman Old Style" class="fsx04" color="#008000">hit</font><font face="Bookman Old Style" class="fsx04">.&nbsp; If we left this out, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> would plead with </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04"> if he </font><font face="Bookman Old Style" class="fsx04" color="#008000">hit</font><font face="Bookman Old Style" class="fsx04"> anyone, not necessarily </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04">.&nbsp; Right now we only have </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> in the storyworld, but we might add other actors later, and this script will make sure that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> only pleads on behalf of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04">.&nbsp; <br>
+<br>
+The </font><font face="Bookman Old Style" class="fsx04" color="#c00000">Desirable</font><font face="Bookman Old Style" class="fsx04"> script can remain at </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04">.&nbsp; <br>
+<br>
+We also need to assign an </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> value.&nbsp; Use </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0 </font><font face="Bookman Old Style" class="fsx04">for this as well.&nbsp; <br>
+<br>
+Finally, we don't want </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> ever responding with a simple "OK," so delete that </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+There's just one last step to take here: we need to engage the hijacking feature. To do that, click once on the "Properties" button, and check the checkbox marked "Hijackable." <br>
+<br>
+You're all set. Run Storyteller and see what happens.<br>
+<hr></font><font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-a-12-consequences.html">Consequences</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><div align="right">This is the last tutorial in group 1, <B>Creating a Storyworld Walkthrough</B>.<br>
+&nbsp; Group 2, <B>Tools</B>, begins with:&nbsp; <a href="t-b-01-properties-box.html">Properties Box</a><br><br></div></font><div align="left"><font face="Bookman Old Style" class="fsx04"><hr><br></font></div>
+</div>
+</div>
+
+
+<div id="Oobj456">
+<img name="Ggeo288" src="http://www.storytron.com/Tutorial/geometry/obj456geo288shd7p407.jpg" alt="" border = "0"  width="775" height="28"></div>
+
+<div id="Oobj457">
+<div id="Ggeo289" class="dfltt">
+<div align="center"><font face="Bookman Old Style" color="#ffffff"><a href="index.html" class="txdec"><font class="txdec" color="#f9f3ee">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/sitemap.html" class="txdec"><font class="txdec" color="#f9f3ee">SiteMap</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/feedback.html" class="txdec"><font class="txdec" color="#f9f3ee">Feedback</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/faq.html" class="txdec"><font class="txdec" color="#f9f3ee">FAQ</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/pressroom.html" class="txdec"><font class="txdec" color="#ffffff">Press Room</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/privacy-policy.html" class="txdec"><font class="txdec" color="#ffffff">Privacy Policy</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/ipb/index-54403.html" target="_blank" class="txdec"><font class="txdec" color="#ffffff">Login</font></a><br></font></div>
+</div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

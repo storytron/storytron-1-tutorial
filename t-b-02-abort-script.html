@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Abort Script</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj202 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:66px;width:400px;height:71px;}
+#Oobj203 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:123px;width:766px;height:523px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj54 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:579px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj202">
+<div id="Ggeo161" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Abort Script<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj203">
+<div id="Ggeo162" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">Very rarely, you'll encounter a situation in which you need an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> to abort an already-established </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Plan</font><font face="Bookman Old Style" class="fsx04">. For example, suppose that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> decides to poison </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04"> and the first step of her scheme is to cook the poison, which takes several hours. While the poison is cooking, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04"> comes by to visit and sincerely apologizes for his past transgressions against </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04">. They kiss and make up. However, the poison is still cooking and when the cooking is complete, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> has a </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Plan</font><font face="Bookman Old Style" class="fsx04"> in place to put the poison into </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04">'s coffee. How do you prevent this from happening? <br>
+<br>
+The old way was to insert some sort of test in the Inclination Script that asked "Gee, has </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04"> apologized for his transgressions?" This turned out to be clumsy, and the Scripts necessary to make it work were long and complicated. So we designed a better system: the Abort Script. This Script is so rarely needed that we don't make it an automatic part of the normal scripting process. Instead, it is optional. To turn on the Abort Script, you have to open the Properties box for the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> and check the "Abort" checkbox therein. This places a new Script button (Abort) above the Consequences menu button. This Script takes a boolean value; if it evaluates to <I>true</I>, then execution of the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Plan</font><font face="Bookman Old Style" class="fsx04"> containing that </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> will be aborted. </font><font face="Bookman Old Style" class="fsx04">The Engine checks the Abort Script whenever it is about to execute a </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Plan</font><font face="Bookman Old Style" class="fsx04"> containing that </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">.</font><font face="Times New Roman" class="fsx04">&nbsp; </font><font face="Bookman Old Style" class="fsx04">This way, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> could abort poisoning </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Tom</font><font face="Bookman Old Style" class="fsx04"> and two minutes later, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jennifer</font><font face="Bookman Old Style" class="fsx04"> could proceed with poisoning </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Bob</font><font face="Bookman Old Style" class="fsx04">.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><HR></font><br>
+<font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-b-01-properties-box.html">Properties Box</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-b-03-relationship-editor.html">Relationship Editor</a></font><br>
+<br>
+<font face="Bookman Old Style"><hr><br></font></div>
+</div>
+
+
+<div id="Oobj456">
+<img name="Ggeo288" src="http://www.storytron.com/Tutorial/geometry/obj456geo288shd7p407.jpg" alt="" border = "0"  width="775" height="28"></div>
+
+<div id="Oobj457">
+<div id="Ggeo289" class="dfltt">
+<div align="center"><font face="Bookman Old Style" color="#ffffff"><a href="index.html" class="txdec"><font class="txdec" color="#f9f3ee">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/sitemap.html" class="txdec"><font class="txdec" color="#f9f3ee">SiteMap</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/feedback.html" class="txdec"><font class="txdec" color="#f9f3ee">Feedback</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/faq.html" class="txdec"><font class="txdec" color="#f9f3ee">FAQ</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/pressroom.html" class="txdec"><font class="txdec" color="#ffffff">Press Room</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/privacy-policy.html" class="txdec"><font class="txdec" color="#ffffff">Privacy Policy</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/ipb/index-54403.html" target="_blank" class="txdec"><font class="txdec" color="#ffffff">Login</font></a><br></font></div>
+</div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

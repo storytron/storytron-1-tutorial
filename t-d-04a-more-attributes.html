@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Traits</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj192 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:71px;width:400px;height:71px;}
+#Oobj193 {position:absolute;z-index:2;visibility:visible;text-align:left;left:206px;top:124px;width:766px;height:2395px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj195 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:2248px;width:730px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj192">
+<div id="Ggeo254" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+More About Attributes<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj193">
+<div id="Ggeo133" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">In <a href="t-a-10-attributes.html">Attributes</a>, we talked about </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Prop</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Stage</font><font face="Bookman Old Style" class="fsx04"> core traits and characteristics. In <a href="t-b-03-relationship-editor.html">Relationship Editor</a>, we touched on Accordance and perceived traits. This tutorial provides more detail on how you can put Weight Traits and Corresponding Traits to use in your scripts.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Weight Traits</B></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">In the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> Editor, you will see that for every </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> Trait, there is a corresponding WeightTrait. WeightTraits are very powerful storytelling tools.</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">An </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">'s Trait tells you what they are really like. Their Weight Trait tells you how they want to be perceived: i.e., how much they value the given Trait. For instance, in our testing storyworld, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04"> may be rather hotheaded (that is, he has a somewhat large </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Cool_Volatile</font><font face="Bookman Old Style" class="fsx04"> value), but he may want to be <I>perceived</I> as levelheaded. This disparity between your who characters are, and who they wish they were, is at the heart of good storytelling, and you can use it to achieve strong effects. See Corresponding Traits below for an example of how this disparity can be used in scripting.</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Also, since WeightTraits reflect the characteristics the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> value in themselves, as a general rule, WeightTraits can also be used as an indicator of what your </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> value in others. Here's an </font><font face="Bookman Old Style" class="fsx04">example</font><font face="Bookman Old Style" class="fsx04">.</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Let's say </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Carmina</font><font face="Bookman Old Style" class="fsx04"> has just learned that her friend </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Florence</font><font face="Bookman Old Style" class="fsx04"> has deceived her about something fairly minor. Two different kinds of emotional reactions might be appropriate for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Carmina</font><font face="Bookman Old Style" class="fsx04">:</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">(1) By how much will her perception of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Florence</font><font face="Bookman Old Style" class="fsx04">'s trustworthiness change?</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04">(2) How angry she does get about being deceived? </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Clearly, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Carmina</font><font face="Bookman Old Style" class="fsx04">'s perception of her friend's honesty will always decrease, if she finds out she has been lied to. But how angry she gets can vary. If she values honesty highly (that is, she has a high </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">False_HonestWeight</font><font face="Bookman Old Style" class="fsx04"> value&mdash;say, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.4 </font><font face="Bookman Old Style" class="fsx04">or so), she might be furious over even a small deception. But if she has a low </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">False_HonestWeight </font><font face="Bookman Old Style" class="fsx04">(say, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.4</font><font face="Bookman Old Style" class="fsx04">)&mdash;even if she has a high </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">False_Honest</font><font face="Bookman Old Style" class="fsx04">!&mdash;she does not place a high premium on honesty, either in herself, or in others. In this case, she might get mildly irritated, but would be more tolerant of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Florence</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#087a3a">fib</font><font face="Bookman Old Style" class="fsx04">.</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Here is how the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">AdjustFearful_Angry</font><font face="Bookman Old Style" class="fsx04"> Script might look:</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#008000">fib to</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">fibbee</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">AdjustFearful_Angry</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber2UNumber of:</font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">False_HonestWeight of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReactingActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">The </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber2UNumber</font><font face="Bookman Old Style" class="fsx04"> term says the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> will never become fearful over being lied to; only angry. The extent to which the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> values the characteristic of honesty determines how mad a </font><font face="Bookman Old Style" class="fsx04" color="#008000">fib</font><font face="Bookman Old Style" class="fsx04"> will make him or her. Create this script and then test it in Scriptalyzer. Notice how differently the script behaves for a high </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">False_HonestWeight </font><font face="Bookman Old Style" class="fsx04">versus a low one.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Corresponding Traits</B></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Here is how to use the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Corresponding___Trait </font><font face="Bookman Old Style" class="fsx04">set of Operators. </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">For every invisible core </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attribute</font><font face="Bookman Old Style" class="fsx04">, there is a corresponding set of related </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attributes</font><font face="Bookman Old Style" class="fsx04">. For </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> the traits include:</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Xxx_Yyy </font><font face="Bookman Old Style" class="fsx04">(Core Trait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Cool_Volatile</font><font face="Bookman Old Style" class="fsx04">)</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">AccordXxx_Yyy </font><font face="Bookman Old Style" class="fsx04">(Accordance Trait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">AccordCool_Volatile</font><font face="Bookman Old Style" class="fsx04">)</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Xxx_YyyWeight</font><font face="Bookman Old Style" class="fsx04"> (Weight Trait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Cool_VolatileWeight</font><font face="Bookman Old Style" class="fsx04">)</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">pXxx_Yyy </font><font face="Bookman Old Style" class="fsx04">(Perceived Trait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">pCool_Volatile</font><font face="Bookman Old Style" class="fsx04">)</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">pXxx_YyyWeight </font><font face="Bookman Old Style" class="fsx04">(Perceived WeightTrait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">pCool_VolatileWeight</font><font face="Bookman Old Style" class="fsx04">)</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">cXxx_Yyy </font><font face="Bookman Old Style" class="fsx04">(Confidence Trait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">cCool_Volatile</font><font face="Bookman Old Style" class="fsx04">)</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">For </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Props</font><font face="Bookman Old Style" class="fsx04">: </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Xxx_Yyy </font><font face="Bookman Old Style" class="fsx04">(Core Trait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Harmless_Lethal</font><font face="Bookman Old Style" class="fsx04">)</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">pXxx_Yyy</font><font face="Bookman Old Style" class="fsx04"> (Perceived Trait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">pHarmless_Lethal</font><font face="Bookman Old Style" class="fsx04">)</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">cXxx_Yyy </font><font face="Bookman Old Style" class="fsx04">(Confidence Trait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">cHarmless_Lethal</font><font face="Bookman Old Style" class="fsx04">)</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">For </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Stages</font><font face="Bookman Old Style" class="fsx04">:</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Xxx_Yyy </font><font face="Bookman Old Style" class="fsx04">(Core Trait - e.g., </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Grungy_Elegant</font><font face="Bookman Old Style" class="fsx04">)</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04"><img src="http://www.storytron.com/Tutorial/images/bullet.gif" width="16" height="16"></font><font face="Wingdings" class="fsx02" color="#000080"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">pXxx_Yyy</font><font face="Bookman Old Style" class="fsx04"> (Perceived Trait - e.g.,</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> pGrungy_Elegant</font><font face="Bookman Old Style" class="fsx04">)</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">The</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> Corresponding___Trait </font><font face="Bookman Old Style" class="fsx04">Operators allow you to cross-reference these different related </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attributes</font><font face="Bookman Old Style" class="fsx04">. Here is an example. </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Assume that you want to create a sequence where </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> can insult each other. Let's assume that the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> have three different choices. They can call their foe ugly, stupid, or mean. In the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">insult appearance</font><font face="Bookman Old Style" class="fsx04">, the Deikto sentence would look something like this: </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">Subject</font><font face="Bookman Old Style" class="fsx04"> - </font><font face="Bookman Old Style" class="fsx04" color="#008000">insult appearance</font><font face="Bookman Old Style" class="fsx04"> - </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> - </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">4ActorTrait</font><font face="Bookman Old Style" class="fsx04"> - </font><font face="Bookman Old Style" class="fsx04" color="#400080">5Quantifier</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">&mdash; where </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">4ActorTrait</font><font face="Bookman Old Style" class="fsx04"> is the </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attribute</font><font face="Bookman Old Style" class="fsx04"> that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> wants to </font><font face="Bookman Old Style" class="fsx04" color="#008000">insult</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#400080">5Quantifier</font><font face="Bookman Old Style" class="fsx04"> is the degree of insult.</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">To use this script, your </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActors</font><font face="Bookman Old Style" class="fsx04"> have to figure out what <I>they believe</I> their foe is most sensitive about. It turns out that there is a simple way to do this. Storytronic </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> all have a perception of each others' personalities, including how important certain characteristics are to them. These latter perceptions of others' values are the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">' </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">p___WeightTraits</font><font face="Bookman Old Style" class="fsx04">. In other words, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mark</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">pStupid_SmartWeight </font><font face="Bookman Old Style" class="fsx04">for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jonathan</font><font face="Bookman Old Style" class="fsx04"> is how much </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mark</font><font face="Bookman Old Style" class="fsx04"> <I>thinks</I> </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jonathan</font><font face="Bookman Old Style" class="fsx04"> wants to be perceived as smart.</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">The </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">4ActorTrait</font><font face="Bookman Old Style" class="fsx04"> Desirable </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">, then, would look like this:</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">CorrespondingPWeight of:</font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp; ReactingActor</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp; ThisSubject</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Candidate4ActorTrait</font><font face="Bookman Old Style" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">With this script, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> chooses the </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attribute</font><font face="Bookman Old Style" class="fsx04"> he or she believes the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> is most sensitive about.</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">(For extra credit, can you figure out what the </font><font face="Bookman Old Style" class="fsx04" color="#400080">5Quantifier</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> scripts should look like? As a suggestion, you might tie the intensity of the insult to how much </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> dislikes </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">; that is the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">pNasty_Nice </font><font face="Bookman Old Style" class="fsx04">of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">. Or you might use </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Fearful_Angry</font><font face="Bookman Old Style" class="fsx04">. A couple of hints: to make this </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> work properly, all traits that are deemed acceptable for insult will need to be bipolar, and you will need to use </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BInverse</font><font face="Bookman Old Style" class="fsx04"> of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber2UNumber</font><font face="Bookman Old Style" class="fsx04"> if you want the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> to always say something negative.)</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><hr></font><br>
+<font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-d-04-audience-requirements.html">Audience Requirements</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx03"> Next tutorial:&nbsp; <a href="t-d-05-quantifiers.html">Quantifiers</a></font><br>
+<font face="Bookman Old Style" class="fsx04"><hr><br></font></div>
+</div>
+
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

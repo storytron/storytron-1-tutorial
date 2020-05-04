@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Main Engine Loop</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj3 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:66px;width:400px;height:71px;}
+#Oobj6 {position:absolute;z-index:2;visibility:visible;text-align:left;left:206px;top:124px;width:767px;height:4969px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj72 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:5030px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj3">
+<div id="Ggeo12" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Engine Operation Overview<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj6">
+<div id="Ggeo62" class="dfltt">
+<font face="Bookman Old Style" class="fsx04"><I>To get the most from these tutorials, follow the instructions on <a href="tutorials.html">downloading SWAT and joining the Authors' Guild</a> before you begin.&nbsp; </I></font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This series of flow charts depicts, in deepening levels of detail, the processing decisions made by the Story Engine in running the storyworld.&nbsp; First is the main engine loop:<br>
+<br>
+<center><img src="images/t16-a.jpg" width="490" height="485"></center><br><br></font><div align="center"><font face="Bookman Old Style" class="fsx04">The Story Engine processes all </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors'</font><font face="Bookman Old Style" class="fsx04"> actions and travel:<br><br></div></font><div align="left"><font face="Bookman Old Style" class="fsx04"><center><img src="images/t16-b.jpg" width="474" height="637"></center><br><br></div></font><div align="center"><font face="Bookman Old Style" class="fsx04">For each </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">, the Story Engine makes a cascading set <br>
+of decisions and processes his or her </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Plan</font><font face="Bookman Old Style" class="fsx04">(s):<br><br></div></font><div align="left"><font face="Bookman Old Style" class="fsx04"><center><img src="images/t16-c.jpg" width="540" height="720"></center><br><br></div></font><div align="center"><font face="Bookman Old Style" class="fsx04">To execute a </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Plan</font><font face="Bookman Old Style" class="fsx04"> entails the following series of steps:<br><br></div></font><div align="left"><font face="Bookman Old Style" class="fsx04"><center><img src="images/t16-d.jpg" width="540" height="720"></center><br><br></div></font><div align="center"><font face="Bookman Old Style" class="fsx04">The </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">'s Reaction involves a set of decisions and calculations, as follows:<br><br></div></font><div align="left"><font face="Bookman Old Style" class="fsx04"><center><img src="images/t16-e.jpg" width="540" height="720"></center><br><br></div></font><div align="center"><font face="Bookman Old Style" class="fsx04">The Story Engine performs the following steps for each </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> under consideration by a </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">:<br><br></div></font><div align="left"><font face="Bookman Old Style" class="fsx04"><center><img src="images/t16-f.jpg" width="540" height="720"></center></font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04">And that's all there is to it! All right, that's a fib...believe it or not, this is a simplified version of what happens. But it gives you the big picture of what the Engine does, in what order, to make things happen in your storyworld. <br>
+<br>
+The next tutorial contains this process in written form with some more detail, including </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> travel. </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Downloadable versions of these flowcharts can be found in <a href="http://www.storytron.com/Tutorial/authors-snips.html">Snips, Tips, and Tricks</a>.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style"><hr><br></div></font><div align="center"><font face="Bookman Old Style" class="fsx03">Previous tutorial (Group 4):&nbsp; <a href="t-d-08-blend2.html">All You Need Is Blend (part 2)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-e-02-engine-operation-detail.html">Engine Operation Detail</a><br><br></div></font><div align="left"><font face="Bookman Old Style"><hr><br></font></div>
+</div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

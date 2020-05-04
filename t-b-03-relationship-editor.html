@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Relationship Editor</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj18 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:66px;width:400px;height:71px;}
+#Oobj20 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:121px;width:766px;height:2420px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj55 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:2479px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj18">
+<div id="Ggeo69" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Relationship Editor<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj20">
+<div id="Ggeo70" class="dfltt">
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t19-a.jpg" width="523" height="393"></center><br>
+<br>
+The Relationship Editor handles the tedious task of defining all the relationships among all the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">. There are quite of few of these, and it can take a lot of work to fill in all the data, so the Relationship Editor also provides a few tools for easing your workload.<br>
+<br>
+But first, we have to explain a few concepts. The core concept is the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attribute</font><font face="Bookman Old Style" class="fsx04">. You learned about Attributes in Lesson 10. What we didn't tell you is that </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attributes</font><font face="Bookman Old Style" class="fsx04"> can be <I>perceived</I> by other </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="MS Sans Serif" class="fsx02">&#8212;</font><font face="Bookman Old Style" class="fsx04">and that these perceived values are not necessarily the same as the actual values. <br>
+<br>
+Let's illustrate this with an example: imagine an </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attribute</font><font face="Bookman Old Style" class="fsx04"> called </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest</font><font face="Bookman Old Style" class="fsx04">, representing the integrity of an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">. </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest</font><font face="Bookman Old Style" class="fsx04"> value, as specified in the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> Editor, is how </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04"> truly is. The </font><font face="Bookman Old Style" class="fsx04" color="#006080">pFalse_Honest </font><font face="Bookman Old Style" class="fsx04">value (the "perceived" </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest</font><font face="Bookman Old Style" class="fsx04"> value) of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jane</font><font face="Bookman Old Style" class="fsx04"> for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04"> is how </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jane</font><font face="Bookman Old Style" class="fsx04"> <I>thinks</I> </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04"> is (i.e., how much she trusts him). The </font><font face="Bookman Old Style" class="fsx04" color="#006080">cFalse_Honest </font><font face="Bookman Old Style" class="fsx04">is how sure she is of her perception. For example, if she knows only what's she has heard of him on the grapevine, </font><font face="Bookman Old Style" class="fsx04" color="#006080">cFalse_Honest </font><font face="Bookman Old Style" class="fsx04">will be low, but if she has direct experience of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest </font><font face="Bookman Old Style" class="fsx04">(if, for example, she knows that he lied to her), then her</font><font face="Bookman Old Style" class="fsx04" color="#006080"> cFalse_Honest </font><font face="Bookman Old Style" class="fsx04">will be higher. <br>
+<br>
+This is important because, in drama, different people have differing estimates of others. Those differing estimates are the source of so much dramatic fodder, as people gossip about others. And these differing perceptions will be the source of some conflict themselves. Suppose, for example, that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Francesca</font><font face="Bookman Old Style" class="fsx04"> tells </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jane</font><font face="Bookman Old Style" class="fsx04"> that she thinks </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04"> is trustworthy (</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest</font><font face="Bookman Old Style" class="fsx04"> value is high). </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jane</font><font face="Bookman Old Style" class="fsx04">, however, believes that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick </font><font face="Bookman Old Style" class="fsx04">is not trustworthy (</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest</font><font face="Bookman Old Style" class="fsx04"> value is low). </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jane</font><font face="Bookman Old Style" class="fsx04"> will note the discrepancy between her existing estimation of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04"> and what </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Francesca</font><font face="Bookman Old Style" class="fsx04"> is telling her. Perhaps she will modify her estimation of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Rick</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest</font><font face="Bookman Old Style" class="fsx04"> upwards. Perhaps she will decide that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Francesca</font><font face="Bookman Old Style" class="fsx04"> is lying. It depends on some other factors. You can see how our expert Laura Mixon handled this tricky problem in this portion of an Inclination script from her demonstration storyworld, ChitChat:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#008000">Tell re personality: </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">tellee: </font><font face="Bookman Old Style" class="fsx04" color="#008000">contradict: </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><br>
+<font face="Bookman Old Style" class="fsx04">...</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of: </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; 1. I have a big diff in perception from you</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp; BAbsval of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BDifference of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CorrespondingPActorTrait of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This4Actor</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">This5ActorTrait</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quantifier2BNumber of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#4d2c61">This6Quantifier</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; 2. I am certain I am right in my perception<br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BInverse of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CorrespondingCActorTrait of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This4Actor</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">This5ActorTrait</font><br>
+<font face="Bookman Old Style" class="fsx04">...<br>
+<br>
+Going back to the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> Editor, we can now understand the two concepts of Accordance and Weight. Accordance is how readily an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> accords high values of the Attribute to others. Thus, if </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jane</font><font face="Bookman Old Style" class="fsx04"> has a high </font><font face="Bookman Old Style" class="fsx04" color="#006080">accordFalse_Honest</font><font face="Bookman Old Style" class="fsx04">, then she readily assumes that other </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> have high values of </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest</font><font face="Bookman Old Style" class="fsx04">&#8212;</font><font face="Bookman Old Style" class="fsx04">in other words, she's gullible. If she has a low value of </font><font face="Bookman Old Style" class="fsx04" color="#006080">accordFalse_Honest</font><font face="Bookman Old Style" class="fsx04">, then she's suspicious: she doesn't give people a high value of </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest </font><font face="Bookman Old Style" class="fsx04">unless they prove it to her.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#006080">False_HonestWeight</font><font face="Bookman Old Style" class="fsx04"> is the degree to which an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> desires to have high </font><font face="Bookman Old Style" class="fsx04" color="#006080">pFalse_Honest </font><font face="Bookman Old Style" class="fsx04">values</font><font face="MS Sans Serif" class="fsx02">&#8212;</font><font face="Bookman Old Style" class="fsx04">in other words, how much that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> desires to be trusted. An </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> who is vain will have a high value of </font><font face="Bookman Old Style" class="fsx04" color="#006080">Ugly_AttractiveWeight</font><font face="Bookman Old Style" class="fsx04">; an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> with a low value of</font><font face="Bookman Old Style" class="fsx04" color="#006080"> Cowardly_BraveWeight </font><font face="Bookman Old Style" class="fsx04">doesn't care if other people think he's a coward.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+There are three special variables that require your attention: </font><font face="Bookman Old Style" class="fsx04" color="#006080">familiarity</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#006080">debt_Grace</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#006080">stranger_Kin</font><font face="Bookman Old Style" class="fsx04">. These are all </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04"> variables. The first, </font><font face="Bookman Old Style" class="fsx04" color="#006080">familiarity</font><font face="Bookman Old Style" class="fsx04">, is useful for initializing p-values. Notice the little checkboxes next to each of the regular </font><font face="Bookman Old Style" class="fsx04" color="#006080">p-Attributes</font><font face="Bookman Old Style" class="fsx04">. If you check one of those, then you're telling SWAT "I'll fill in this value myself." But if you uncheck this box, then you're telling the Engine, "Fill it in automatically for me." The Engine will use the </font><font face="Bookman Old Style" class="fsx04" color="#006080">familiarity</font><font face="Bookman Old Style" class="fsx04"> value along with the accordance value to calculate the p-value directly, so you don't have to. Here's the algorithm that the Engine uses:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. It starts off assuming that the p value is </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.00</font><font face="Bookman Old Style" class="fsx04"> (the most likely case)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Then it biases it towards the actual value in proportion to the </font><font face="Bookman Old Style" class="fsx04" color="#006080">familiarity</font><font face="Bookman Old Style" class="fsx04"> value.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Lastly, it biases it up or down in proportion to the accord value<br>
+<br>
+It's a big time-saver, and it yields good results in most cases. You'll want to use the manual override (checking the box) rarely.<br>
+<br>
+When you use the automatic procedure by unchecking the checkbox, the c-value is the same thing as the </font><font face="Bookman Old Style" class="fsx04" color="#006080">familiarity</font><font face="Bookman Old Style" class="fsx04"> value.<br>
+<br>
+Next comes the </font><font face="Bookman Old Style" class="fsx04" color="#006080">debt_Grace </font><font face="Bookman Old Style" class="fsx04">value. Normally, you'll just initialize this to zero. It represents the idea of <I>tanagadalang</I> (if you're Indonesian) or an interpersonal kind of <I>karma</I>, or just the idea that "You owe me." We've found that it can be very handy in a lot of drama. Remember, it's not necessarily symmetric: two different </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> can have very different ideas of who owes whom.<br>
+<br>
+Lastly, there's the </font><font face="Bookman Old Style" class="fsx04" color="#006080">stranger_Kin </font><font face="Bookman Old Style" class="fsx04">relationship. This is used to handle the dramatic relationship expressed in the adage "Blood is thicker than water." </font><font face="Bookman Old Style" class="fsx04">It can also be used to handle kinship based on marriage, adoption, and so on.&nbsp; </font><font face="Bookman Old Style" class="fsx04">It's a little odd, though, in that </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04">, which normally expresses the "average" value, in this case should reflect something a little more than that. </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Depending on the range and importance of kinship in your storyworld, you can set the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors' </font><font face="Bookman Old Style" class="fsx04">relationships accordingly. For instance, in a tight-knit family drama, you may want to set </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04"> as cousins. In a storyworld about racial relations or the clash between two cultures, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04"> might represent people of the same clan or ethnicity. In storyworld of a first contact with extraterrestrials, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0 </font><font face="Bookman Old Style" class="fsx04">might mean two </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> are simply of the same species!<br><br></font><div align="left"><font face="Bookman Old Style" class="fsx04"><hr></font><br>
+<font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-b-02-abort-script.html">Abort Script</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-b-04-spying.html">Spying</a><br>
+<br>
+<hr><br></font></div>
+</div>
+</div>
+
+
+<div id="Oobj456">
+<img name="Ggeo288" src="http://www.storytron.com/Tutorial/geometry/obj456geo288shd7p407.jpg" alt="" border = "0"  width="775" height="28"></div>
+
+<div id="Oobj457">
+<div id="Ggeo289" class="dfltt">
+<div align="center"><font face="Bookman Old Style" color="#ffffff"><a href="index.html" class="txdec"><font class="txdec" color="#f9f3ee">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/sitemap.html" class="txdec"><font class="txdec" color="#f9f3ee">SiteMap</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/feedback.html" class="txdec"><font class="txdec" color="#f9f3ee">Feedback</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/faq.html" class="txdec"><font class="txdec" color="#f9f3ee">FAQ</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/pressroom.html" class="txdec"><font class="txdec" color="#ffffff">Press Room</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/privacy-policy.html" class="txdec"><font class="txdec" color="#ffffff">Privacy Policy</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.storytron.com/Tutorial/ipb/index-54403.html" target="_blank" class="txdec"><font class="txdec" color="#ffffff">Login</font></a><br></font></div>
+</div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

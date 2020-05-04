@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Poison</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj190 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:71px;width:400px;height:49px;}
+#Oobj191 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:126px;width:767px;height:5209px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj456 {position:absolute;z-index:3;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:4;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:5;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj446 {position:absolute;z-index:6;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj255 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:5320px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj190">
+<div id="Ggeo213" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Poison<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj191">
+<div id="Ggeo214" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">Poison is a special layer of protection that the Story Engine provides you. OK, that probably doesn't sound comforting, but once you understand the concept, you'll appreciate our terminology.&nbsp; <br>
+<br>
+We have already made it impossible for you to write a Script that is nonsense. You can't multiply </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04"> by the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">chair</font><font face="Bookman Old Style" class="fsx04">, nor can you ask whether your </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">first stage</font><font face="Bookman Old Style" class="fsx04"> is true or false. We simply don't permit you to write anything that is obviously nonsensical.<br>
+<br>
+But what about Scripts that make sense most of the time, but, under the wrong circumstances, MIGHT make no sense? For example, consider this simple Script:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">CouchPotato_Athletic of: </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; PickBestActor <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOT <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Female of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">CouchPotato_Athletic of: </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This will figure out how much of a couch potato or athlete each of the males in the cast is, and picks the most athletic of them. Sounds reasonable, doesn't it? But let's suppose that some crazy person playing your storyworld has somehow managed to kill off every last male in the cast. There aren't any men left! Which means that PickBestActor won't find anybody to pick. This is a nonsensical situation! What is our poor Engine to do?<br>
+<br>
+The Engine solves this problem by Poisoning the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> in which the Script appears. In other words, the Engine says, "I can't make hide nor hair out of this Script, so I'm giving up on it, which means that I can't complete the calculations for this </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04">, so I'm just going to ignore the entire </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04">." It continues running the storyworld, but skips over the bad part. The storyworld won't crash and die if you create a script like this; it will do the best it can with what it's got. And in fact, there will be times when you decide it's OK for a particular instance of Poison to happen under certain rare circumstances.<br>
+<br>
+Still, Poison is a dead-end, which means it cuts off options for your player. It can also interfere with important housekeeping tasks that you might be counting on. So it's worthwhile to minimize the opportunities for Poison to occur. Here's how you can diagnose and fix common types of Poison.<br>
+<br>
+<B>How To Know if a Script Is Poisoned</B><br>
+<br>
+Rehearsal Lizard and Log Lizard both report Poison. Search Lizard can be useful in finding all places where you use a particular Operator that might result in Poison. See <a href="t-b-07-lizards.html">Lizards</a> for more information on how to use these features of SWAT.<br>
+<br>
+<B>What Happens If a Script Is Poisoned</B><br>
+<br>
+The results of a script Poison depend on where it occurs. Let's delve a little more deeply. Here is how a sample </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> would look, when all its elements are working properly:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t-d02-a.jpg" width="500" height="440"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">All pieces of the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> are in working order and thus they give meaningful results. We have some physical Consequences (perhaps a </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Prop</font><font face="Bookman Old Style" class="fsx04"> changes hands, perhaps weather conditions change on a </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Stage</font><font face="Bookman Old Style" class="fsx04">; perhaps an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> has died). We have two </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Roles</font><font face="Bookman Old Style" class="fsx04"> (one could be the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> of </font><font face="Bookman Old Style" class="fsx04" color="#008000">ThisVerb</font><font face="Bookman Old Style" class="fsx04">; the other might be a Witness). Both </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Roles</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">#1 and #2</font><font face="Bookman Old Style" class="fsx04">, contain Emotional Reactions, and the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActors</font><font face="Bookman Old Style" class="fsx04"> for those </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Roles</font><font face="Bookman Old Style" class="fsx04"> have </font><font face="Bookman Old Style" class="fsx04" color="#008000">Options</font><font face="Bookman Old Style" class="fsx04"> (i.e., opportunities to take action). Each </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> provides the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActors</font><font face="Bookman Old Style" class="fsx04"> with </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSockets</font><font face="Bookman Old Style" class="fsx04"> telling them with whom (and/or with what and/or where) they should react. The </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclinations</font><font face="Bookman Old Style" class="fsx04"> tell how likely they are to take the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Options</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+<U>Poison in a WordSocket or Inclination</U><br>
+<br>
+If a script gets Poisoned at the </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> or </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> level, the Poison carries up to the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> level.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t-d02-b.jpg" width="500" height="460"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">At the level of the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> is the lowest possible place this kind of Poison can be contained, because every </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> is necessary for the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> to make sense. The Story Engine handles a Poisoned </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> by making it invisible to the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> (including the player). In the example shown above, in </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role #1</font><font face="Bookman Old Style" class="fsx04">, the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> will have access to only one </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option #2</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+<U>Poison in an Emotional Reaction</U><br>
+<br>
+Poisoned Emotional Reaction scripts do not Poison the rest of the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t-d02-c.jpg" width="500" height="440"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">However, they can affect the outcome of your storyworld. For instance, a Poisoned Emotional Reaction script could lead the other </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> to treat your Protagonist exactly the same way after he murders an innocent bystander as they did beforehand.<br>
+<br>
+<U>Poisoned Consequences</U><br>
+<br>
+As with Emotional Reactions, Consequences with Poison are self-contained, and do not prevent the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Roles</font><font face="Bookman Old Style" class="fsx04"> from being triggered.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t-d02-d.jpg" width="500" height="440"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">But just as with the other types of Poison, they can cause some odd results. For instance, a Poisoned Consequence could lead to one </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> giving another a </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Prop</font><font face="Bookman Old Style" class="fsx04">, but the </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Prop</font><font face="Bookman Old Style" class="fsx04"> not actually changing hands.<br>
+<br>
+<B>Common Poisonings and How to Prevent Them</B><br>
+<br>
+You may not be able to prevent every possible instance of Poison in your storyworld&mdash;and sometimes you may not even want to! But armed with some foreknowledge, you can prevent the most egregious cases. Here are the most frequent causes of Poison and how to fix them.<br>
+<br>
+<U>HistoryBook Operators</U><br>
+<br>
+There are a lot of HistoryBook operators, any of which can trigger Poison: EventHappened, CausalEventHappened, CountEvents, CountCausalEvents, ElapsedTimeSince, IHaventDoneThisBefore, and IHaventDoneThisSince. Especially early on during storyplay, the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> you are trying to look up may not have happened yet.<br>
+<br>
+The only way to avoid a HistoryBook look-up Poisoning is to be certain that the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> you are attempting to identify has definitely occurred before the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> in which you are using the HistoryBook Operator. To identify and correct this kind of Poison, use Log Lizard or Rehearsal Lizard.<br>
+<br>
+<U>PickBest____ Operators</U><br>
+<br>
+PickBest____ is another notorious Poisoner. If the Story Engine can't find a match for the conditions you've specified in a PickBest___ clause, it will kill your script dead. As with Lookup, the only prevention for this is to ensure that there will always be at least one thing (</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Prop</font><font face="Bookman Old Style" class="fsx04">, Trait, or whatever) that fits your PickBest criteria.<br>
+<br>
+<U>Undefined Script Elements</U><br>
+<br>
+Here is a very common Poison, and one that is easy to fix. Undefined terms in your script result in Poison. The fix is to use Search Lizard (see <a href="t-b-07-lizards.html">Lizards</a>), which will generate a clickable list of undefined terms for you. (An undefined term will always start with a question mark, and will appear at the beginning of the Search list.) Click, fix, and go!<br>
+<br>
+<U>Change of Word Socket Data Type</U><br>
+<br>
+When you change a </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> from one type to another (e.g., 4</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> to </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">4Prop</font><font face="Bookman Old Style" class="fsx04">), SWAT does something nifty: instead of throwing away all your scripting work, it keeps your old script. However, this means you almost certainly have some wrong data-type Operators in that </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> script. For instance, if you had a </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">5Actor</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">, and you changed it to a </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">5Prop</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">, the script probably still contains references to </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><font face="Bookman Old Style" class="fsx04">. Since the Engine is no longer considering </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActors </font><font face="Bookman Old Style" class="fsx04">for the </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><font face="Bookman Old Style" class="fsx04"> no longer makes sense, and if the Engine runs across this, it will Poison the </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> (and thus, the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04">).<br>
+<br>
+The way to avoid this kind of Poison is to be sure you immediately update the related script, when you change a </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> data type.&nbsp; <br>
+<br>
+<U>Past____ (and This____ and Chosen____)</U><br>
+<br>
+Another potential Poison source are the Operators Past____, This____, and Chosen____ (e.g., PastSubject, This3Actor, ChosenProp, PastStageTrait). This____ and Chosen____ Poisonings are rare, as SWAT has some protections built in, but just as with other HistoryBook type Operators, Past____ can easily result in Poison. The best way to track these down is to use Rehearsal Lizard or Log Lizard.<br>
+<br>
+<U>Page Number Less Than Zero</U><br>
+<br>
+In rare instances, you might try to pin down a specific </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> by calculating when it happens (that is, its page number). If the number you calculate is less than zero, you will get a Poison. Rehearsal Lizard and Log Lizard allow you to find this type of Poison.<br>
+<br>
+<U>Divide By Zero</U><br>
+<br>
+First, a terminology check, for those who like me do multiplication and division all the time, but haven't referred to the terms for the different since high school. If you set up a script where you are dividing two terms&mdash;say a &#0247; b = c&mdash;the dividend is the first number, a; the divisor is the second number, b; and the quotient is the answer, c. If your divisor (b)is 0, not surprisingly, your script will blow sky high, as dividing by zero is an arithmetic no-no. Again, the best way to find these is to run Rehearsal Lizard or Log Lizard. You can also (a) test your quotients using Scriptalyzer, and (b) double check them using Search Lizard, to head possible Poisons off at the pass.<br>
+<br>
+<U>Box Reference With An Undefined Box</U><br>
+<br>
+If you refer to a Box in a script, but you haven't defined it yet, you will get Poison. Though this isn't foolproof, as a quick check for undefined Boxes, in Search Lizard you can compare the number of Fill___Boxes (e.g., FillVerbActorBox: the place where it's defined) versus the number of ___Boxes (e.g., VerbActorBox: the place where it is used).<br>
+<br>
+<B>Poisoning Exercises</B><br>
+<br>
+For this tutorial, use your test storyworld with some of the above Operators in your scripts. Create conditions you know don't exist in your storyworld to generate Poison. Then try using Log, Rehearsal, and Search Lizards to find and fix them.</font><br>
+<font face="Bookman Old Style" class="fsx04"><hr></font><br>
+<font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-d-01a-whos-fate2.html">Who's Fate? (part 2)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-d-02-word-sockets.html">WordSockets</a></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><hr><br></font></div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

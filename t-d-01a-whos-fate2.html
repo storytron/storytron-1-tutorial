@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Who's Fate? (part 2)</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj85 {position:absolute;z-index:1;visibility:visible;text-align:left;left:207px;top:121px;width:767px;height:2411px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj83 {position:absolute;z-index:2;visibility:visible;text-align:left;left:395px;top:71px;width:400px;height:49px;}
+#Oobj456 {position:absolute;z-index:3;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:4;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:5;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj446 {position:absolute;z-index:6;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj86 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:2503px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj85">
+<div id="Ggeo148" class="dfltt">
+<font face="Bookman Old Style" class="fsx04"><B>Ending a Storyworld Based on Conditions</B> <br>
+<br>
+You have the ability to track the progress of your storyworld using </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04">. Here's how. Suppose your storyworld is a training storyworld that focuses on teaching the player to increase other </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">' willingness to take on and complete challenging tasks (their </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Timid_Confident</font><font face="Bookman Old Style" class="fsx04"> values). Let's assume that you want the storyworld to end after the player through leadership and encouragement increases the average </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> confidence level to 0.4 or more. <br>
+<br>
+First, create a new </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> called "</font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04">." In the Properties box, make the Audience for this </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> Under the Hood. Make the preparation time 10 storymoments. Uncheck the box labeled "occupies DirObject." <br>
+<br>
+Now go to once upon a time. Under the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04">, the AssumeRoleIf script should look like this: </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04">: AssumeRoleIf: <br>
+&nbsp;&nbsp;&nbsp;&nbsp; AND<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PermitFateToReact<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AreSameActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This simply says that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> is the only one who can use this </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+Now remove your first </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> as an </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> and add </font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04">. Also add </font><font face="Bookman Old Style" class="fsx04" color="#008000">penultimate Verb </font><font face="Bookman Old Style" class="fsx04">as an </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+(Note that, if this were a working storyworld, you would also need a separate </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> here for the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Protagonist</font><font face="Bookman Old Style" class="fsx04">. You would need to hook that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> up to a set of </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verbs</font><font face="Bookman Old Style" class="fsx04"> that would allow the player to try different tactics in engaging with the non-human </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> in your storyworld, which would lead to their losing or gaining confidence. We're not going to bother with this step&mdash;just pretend that those </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verbs</font><font face="Bookman Old Style" class="fsx04"> are all there and would gradually change all the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">' </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Timid_Confidence</font><font face="Bookman Old Style" class="fsx04"> Core Traits as the player played the storyworld.) <br>
+<br>
+Recall that we said we want </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> to continue allowing the player to play this training storyworld until the other </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">' average </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Timid_Confidence</font><font face="Bookman Old Style" class="fsx04"> reaches an average of greater than 0.4. This means that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> will allow the storyworld to continue to run, as long as the average </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Timid_Confidence</font><font face="Bookman Old Style" class="fsx04"> of the non-player </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> is less than or equal to 0.4. Once it exceeds that, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> will end the storyworld. Here's what you have to do to make that happen. <br>
+<br>
+For the penultimate </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04">, here is the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> Acceptable script: <br>
+<br>
+AreSameActor <br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor <br>
+&nbsp;&nbsp;&nbsp;&nbsp; Protagonist </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">The </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> script is this: </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Actor@Average of: </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; NOT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AreSameActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Protagonist</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Timid_Confident of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This script calculates the average </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Timid_Confident</font><font face="Bookman Old Style" class="fsx04"> value for all </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> except the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Protagonist</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+The </font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> script is this: <br>
+<br>
+0.4<br>
+<br>
+Remember, the Story Engine will compare the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> of </font><font face="Bookman Old Style" class="fsx04" color="#008000">penultimate</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> with the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> for </font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04">, and will choose the higher value. This is why we set an </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> for </font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04"> of 0.4&mdash; so that the Story Engine continues to </font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04"> until the average </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Timid_Confident</font><font face="Bookman Old Style" class="fsx04"> exceeds it. (Also remember that </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Actor@Average</font><font face="Bookman Old Style" class="fsx04"> is a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04"> that can range from nearly -1 to nearly +1, so 0.4 is a pretty high confidence level.) <br>
+<br>
+The </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> once upon a time always kicks off a storyworld. With this </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04">, you have now set things up so that, if the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">' average confidence is greater than 0.4 at the storyworld start, it will end right away. Otherwise, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> will wait ten moments and then perform the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04">. But since we haven't given </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> anything to do once it reaches the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04">, we need to create a </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> there as well. <br>
+<br>
+Copy </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> under once upon a time, go to </font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04">, and paste the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> there. <br>
+<br>
+By doing this, you have set up a monitoring loop for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04">. Every ten storymoments, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> has to decide what to do: </font><font face="Bookman Old Style" class="fsx04" color="#008000">calculate confidence</font><font face="Bookman Old Style" class="fsx04"> again, or end the storyworld? If the average confidence level of all </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> except the player stays at 0.4 or below, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> will wait ten more minutes, and calculate confidence again. If the average </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> confidence exceeds 0.4, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> chooses penultimate </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> instead, and the storyworld ends. <br>
+<br>
+(Incidentally, you'll also need to be sure to set the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">' </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Timid_Confidence</font><font face="Bookman Old Style" class="fsx04"> Traits so that they average out below 0.4, for this to work. To test whether the script works, though, you can always set the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">' </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Timid_Confidences</font><font face="Bookman Old Style" class="fsx04"> above 0.4, and see if the storyworld ends right away. Or simply use Scriptalyzer to simulate the same effect.) <br>
+<br>
+<br>
+<B>Unique Characteristics of Fate</B> <br>
+<br>
+Because the Story Engine treats </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> differently than it does the other </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> in your storyworld, there are some things you need to know, if you build </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verbs</font><font face="Bookman Old Style" class="fsx04"> using </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+First, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> does not react to </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verbs</font><font face="Bookman Old Style" class="fsx04"> under normal circumstances. The Story Engine prohibits this. To get </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> to react, you must circumvent the normal circumstances. To accomplish this, use the special-purpose Operator PermitFateToReact in the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">'s AssumeRoleIf script. This temporarily disables the constraint so that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> can react. Next, you must specify that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> is the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> you want. To get </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> to do something, the AssumeRoleIf script must have this: <br>
+<br>
+AND <br>
+&nbsp;&nbsp;&nbsp;&nbsp; PermitFateToReact<br>
+&nbsp;&nbsp;&nbsp;&nbsp; AreSameActor:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">(Yeah, it's kinda dumb, to have to tell the Engine twice. We promise, we'll build a smarter tool for the next version of SWAT.) <br>
+<br>
+Next, since </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> is everywhere at once, you will not get a good result if you try to make </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> the subject of the system </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verbs</font><font face="Bookman Old Style" class="fsx04"> depart for and arrive at. <br>
+<br>
+Finally, because the Story Engine ignores </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> for non-special </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verbs</font><font face="Bookman Old Style" class="fsx04">, it will do you no good to designate </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> as the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> or other </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">XxActor</font><font face="Bookman Old Style" class="fsx04"> in a </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">. The Engine will studiously ignore you if you do. The good news is, you don't need to put </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> into a </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">. If a </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> triggers and you've given </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> a </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> in response to that </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fate</font><font face="Bookman Old Style" class="fsx04"> will always react, as long as you include the AssumeRoleIf script shown above. </font><br>
+<font face="Bookman Old Style" class="fsx04"><hr></font><br>
+<font face="Bookman Old Style" class="fsx02">Previous tutorial:&nbsp; <a href="t-d-01-whos-fate.html">Who's Fate? (part 1)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-d-02-poison.html">Poison</a></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><hr><br></font></div>
+</div>
+
+<div id="Oobj83">
+<div id="Ggeo145" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Who's Fate? (part 2)<br></B></font></div>
+</div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

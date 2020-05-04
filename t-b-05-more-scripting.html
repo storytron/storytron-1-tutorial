@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Script Editing Tips</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj23 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:66px;width:400px;height:71px;}
+#Oobj25 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:114px;width:767px;height:2101px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj57 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:2156px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj23">
+<div id="Ggeo24" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Script Editing Tips<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj25">
+<div id="Ggeo25" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">Here are detailed descriptions of some of the editing conveniences we provide.&nbsp; <br>
+<br>
+<B>Cut, copy, and paste</B><br>
+All of the regular cut, copy, and paste tools work inside Scripts. When you use them, they act on the selected Operator and all its arguments. Thus, you can move big chunks of script around with cut and past. Here's an example. Suppose that you realize that you need to reverse the order of subtraction in this Script:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">BDifference of:<br>
+&nbsp;&nbsp;&nbsp; Blend of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nasty_Nice of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Nasty_Nice of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#c00000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0<br>
+&nbsp;&nbsp; 0.5</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">so that the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.5 </font><font face="Bookman Old Style" class="fsx04">is on top and the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> is on the bottom. To do this, simply select the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> Operator, cut, select the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.5 </font><font face="Bookman Old Style" class="fsx04">Operator, and paste. Lastly, enter the </font><font face="Bookman Old Style" class="fsx04" color="#c00000">0.5 </font><font face="Bookman Old Style" class="fsx04">value in the upper slot.<br>
+<br>
+<B>Outsertion</B><br>
+If you select an Operator in a Script and hold down the Control key while choosing a new Operator from a Menu, that new Operator will be "outserted"&#8212;placed above the selected Operator. Here's an example. <br>
+<br>
+Existing Script:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp; BSum of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fearful_Angry of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.5</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Select Operator "BSum," then click on "</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BSum of:</font><font face="Bookman Old Style" class="fsx04">" and hold down the Control key while opening the Arithmetic menu. Select menu item "BInverse" and get this result:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp; BInverse of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BSum of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fearful_Angry of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.5</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">You'll use outsertion quite often in your daily scripting work.<br>
+<br>
+<B>Replacement: </B><br>
+You can replace one Operator with another by holding down the Option key before opening a menu. Example: <br>
+<br>
+Existing Script:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp; BSum of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fearful_Angry of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.50</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Select the Operator BSum, then hold down Option and open Arithmetic menu, selecting "BDifference." Get new Script:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp; BDifference of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fearful_Angry of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.50</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">What's especially nice about this trick is that it preservers the arguments of the original Operator. If you used the direct route, you'd have to erase those internal arguments. This way, you don't erase them. There is a catch, however. You can't just replace any Operator with any other Operator. The only Operators that will be available for you to select are those whose argument types match the argument types of the original Operator. </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This capability extends even to Operators with fewer or more than the number of arguments of the original Operator. For example, if you replace </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">AND3</font><font face="Bookman Old Style" class="fsx04"> with </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">AND4</font><font face="Bookman Old Style" class="fsx04">, the new </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">AND4</font><font face="Bookman Old Style" class="fsx04"> will contain the previous three boolean arguments and add a fourth, undefined boolean Operator at the end. If you go in the other direction, replacing </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">AND4 </font><font face="Bookman Old Style" class="fsx04">with </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">AND3</font><font face="Bookman Old Style" class="fsx04">, then the last boolean argument will be deleted. </font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Collapsing a Script</B><br>
+Suppose you have this Script:<br>
+<br>
+AND</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">AreSameActor of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">NOT</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">AreSameActor of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">And you want to get rid of the first "AreSameActor" term. Just click on the NOT Operator, Copy, click on AND, and Paste. Now it reads:<br>
+<br>
+NOT</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">AreSameActor of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CandidateActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Right-clicking</B><br>
+If you select an Operator and click on the right button on your mouse, then you'll see a long menu pop up next to the selected Operator, containing every single Operator that you could enter in its stead. Some of those Operators are placed inside submenus. </font><font face="Bookman Old Style" class="fsx04">(Mac users, you can reach the right-click/context-sensitive menu by holding down the Control key when clicking on the Operator.&nbsp; But the right-click is so heavily used by Swat that you really should buy a two-button mouse, such as the Apple Mighty Mouse.)</font><br>
+<br>
+<font face="Bookman Old Style"><hr><br></font><div align="center"><font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-b-04-spying.html">Spying</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-b-06-scriptalyzer.html">Scriptalyzer</a><br><br></div></font><div align="left"><font face="Bookman Old Style"><hr><br></font></div>
+</div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

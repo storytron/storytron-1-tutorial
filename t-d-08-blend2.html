@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - All You Need Is Blend (part 2)</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj60 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:71px;width:400px;height:49px;}
+#Oobj68 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:122px;width:765px;height:5990px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj79 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:6049px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj60">
+<div id="Ggeo141" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+All You Need Is Blend (part 2)<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj68">
+<div id="Ggeo142" class="dfltt">
+<font face="Bookman Old Style" class="fsx04"><B>Pushing Away from, Pulling Toward&#8212;Blending with the Center and the Ends</B><br>
+<br>
+It turns out </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> can be used to do a lot of different kinds of things besides averaging two values with a bias. To understand these uses takes a little explanation first.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> works like this:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; A (FromValue?) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; B (ToValue?) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; C (HowFar?)</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04">What's really happening when you use </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> is that you start with the first value, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">A</font><font face="Bookman Old Style" class="fsx04">, and move toward </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">B</font><font face="Bookman Old Style" class="fsx04">. How far you move from </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">A</font><font face="Bookman Old Style" class="fsx04"> to </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">B</font><font face="Bookman Old Style" class="fsx04"> to get your answer is proportional to the value of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">C</font><font face="Bookman Old Style" class="fsx04">. (</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">A</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">B</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">C</font><font face="Bookman Old Style" class="fsx04"> are all </font><font face="Bookman Old Style" class="fsx04" color="#ff0000"><a href="t-d-06-bnumbers-unumbers-numbers.html">BNumbers</a></font><font face="Bookman Old Style" class="fsx04">, and thus can range from nearly </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-1</font><font face="Bookman Old Style" class="fsx04"> to nearly </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+1</font><font face="Bookman Old Style" class="fsx04">). <br>
+<br>
+This is exactly what we did in the examples above. We started with </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Kinship</font><font face="Bookman Old Style" class="fsx04"> between </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">, and moved in the direction of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PNasty_Nice </font><font face="Bookman Old Style" class="fsx04">toward </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">. How far we moved in the direction of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PNasty_Nice </font><font face="Bookman Old Style" class="fsx04">depended on the value of the bias factor, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">C</font><font face="Bookman Old Style" class="fsx04">. So a more general way of describing what </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> does is to say, "Start at </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">A</font><font face="Bookman Old Style" class="fsx04"> and head toward </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">B</font><font face="Bookman Old Style" class="fsx04">, in proportion to </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">C</font><font face="Bookman Old Style" class="fsx04">."<br>
+<br>
+We've already talked about how to use this for two </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attributes</font><font face="Bookman Old Style" class="fsx04"> that you want to average, by assigning your two different factors to </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">A</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">B</font><font face="Bookman Old Style" class="fsx04">, and the bias as </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">C</font><font face="Bookman Old Style" class="fsx04">, but </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> has some other interesting uses, as well.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Blending from Minimum to a Value</B></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">The trick lies in thinking about </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> in terms of a number line:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t29-01.jpg" width="244" height="46"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Imagine that </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><font face="Bookman Old Style" class="fsx04"> and</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> y</font><font face="Bookman Old Style" class="fsx04"> represent </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumbers</font><font face="Bookman Old Style" class="fsx04"> that you want to mess with. Here's the trick: the three numbers </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-1</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+1 </font><font face="Bookman Old Style" class="fsx04">are also values that can be used with </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04">. (Actually, this is not technically true. In </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04"> arithmetic, the values </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-1.0000 </font><font face="Bookman Old Style" class="fsx04">and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+1.0000 </font><font face="Bookman Old Style" class="fsx04">are not allowed. Instead, you have to use </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.9999 </font><font face="Bookman Old Style" class="fsx04">or </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.9999</font><font face="Bookman Old Style" class="fsx04">. To make this easier, we have created created two special constants, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Maxi</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini</font><font face="Bookman Old Style" class="fsx04">, that you can find in the Arithmetic menu, that represent these two extremes.)<br>
+<br>
+Consider, for example, this use of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04">:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">y</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Here's how to visualize it:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t29-a.png" width="505" height="150"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">The main number line is shown in black. The blue line marks the range inside which the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> result must fall, because </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> always produces a number <I>between</I> its first argument and the its second argument (between </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><font face="Bookman Old Style" class="fsx04">, in this example). Now think of the blue line as the number line that</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> y</font><font face="Bookman Old Style" class="fsx04"> sits on. We have drawn an image in red of</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> y</font><font face="Bookman Old Style" class="fsx04">'s numberline superposed over the blue line. (In effect, we have taken the full black number line and squeezed it down to fit it over the blue line.) Now</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> y</font><font face="Bookman Old Style" class="fsx04"> marks the result given by </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04">. To express the idea verbally: </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> pushes </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><font face="Bookman Old Style" class="fsx04"> towards </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini</font><font face="Bookman Old Style" class="fsx04"> in proportion to</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> y</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+Just for fun (yeah, right: math is fun...), let's reverse it, like so:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">y</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Can you guess what the result will be? Here's the visualization:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t29-b.png" width="500" height="143"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">In this case, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> pushes</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> y</font><font face="Bookman Old Style" class="fsx04"> towards </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini</font><font face="Bookman Old Style" class="fsx04"> in proportion to </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+An example of how you might use this construction of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> is if you wanted something to be very unlikely to happen except under certain conditions. Suppose you are doing a psychological drama in which a troubled soul has to resist listening to his inner demons and taking revenge on someone who insulted him. An </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> script for the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">plot revenge</font><font face="Bookman Old Style" class="fsx04"> might look like this: <br>
+<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#008000"> plot revenge: </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Blend of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mini <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sane_Psychotic of: </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Fearful_Angry of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This script pushes </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> to </font><font face="Bookman Old Style" class="fsx04" color="#008000">plot revenge</font><font face="Bookman Old Style" class="fsx04"> toward the minimum value, starting at their Sane_Psychotic value, in proportion to their level of fear or anger. That is, the highest possible value you will get is the value of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor's</font><font face="Bookman Old Style" class="fsx04"> level of insanity, if they are in a state of unbridled outrage. Here are two different scenarios. <br>
+<br>
+(1) With this script, a very sane person (say, with a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Sane_Psychotic</font><font face="Bookman Old Style" class="fsx04"> ActorTrait of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.25</font><font face="Bookman Old Style" class="fsx04"> or less) would be very unlikely to </font><font face="Bookman Old Style" class="fsx04" color="#008000">plot revenge</font><font face="Bookman Old Style" class="fsx04"> no matter how angry they are. For instance, a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Fearful_Angry</font><font face="Bookman Old Style" class="fsx04"> mood of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.8</font><font face="Bookman Old Style" class="fsx04"> would result in an </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.32</font><font face="Bookman Old Style" class="fsx04">&#8212;a pretty low number. <br>
+<br>
+(2) On the other hand, if </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jack the Ripper</font><font face="Bookman Old Style" class="fsx04">, with a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Sane_Psychotic</font><font face="Bookman Old Style" class="fsx04"> value of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.9</font><font face="Bookman Old Style" class="fsx04">, got that angry, his Inclination to </font><font face="Bookman Old Style" class="fsx04" color="#008000">plot revenge</font><font face="Bookman Old Style" class="fsx04"> would be highly likely (an </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.71</font><font face="Bookman Old Style" class="fsx04">). I wouldn't want to hang around such a person! <br>
+<br>
+To test this, go to the Actor Editor and create a new Actor Core Trait called "</font><font face="Bookman Old Style" class="fsx04" color="#006080">Sane_Psychotic</font><font face="Bookman Old Style" class="fsx04">." Then go to the Verb Editor and create an </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> script with the following construction: <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mini <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sane_Psychotic of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fearful_Angry of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Now click on Script > Scriptalyzer on the upper right of the scripting pane. Drag the slider for "</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini</font><font face="Bookman Old Style" class="fsx04">" to the lowest possible point on its slider. Create the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jack the Ripper</font><font face="Bookman Old Style" class="fsx04"> example provided in Scenario (2) above, with </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.90</font><font face="Bookman Old Style" class="fsx04"> for </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Sane_Psychotic</font><font face="Bookman Old Style" class="fsx04"> of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.80</font><font face="Bookman Old Style" class="fsx04"> for his </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Fearful_Angry</font><font face="Bookman Old Style" class="fsx04"> mood. Do you get the same answer? (Remember, the final result of the script calculation always shows up in red on the top number line.) <br>
+<br>
+Here is what it should look like if you do the example above, with an angry </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jack the Ripper</font><font face="Bookman Old Style" class="fsx04">: </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t-d-08-a.jpg" width="520" height="128"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Then try out other values for </font><font face="Bookman Old Style" class="fsx04" color="#006080">Sane_Psychotic</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#006080">Fearful_Angry</font><font face="Bookman Old Style" class="fsx04">, and see if the results you get are what you would expect them to be. Envision a character and choose a </font><font face="Bookman Old Style" class="fsx04" color="#006080">Sane_Psychotic</font><font face="Bookman Old Style" class="fsx04"> value appropriate for his or her personality. Then set the second term to that value, and see what kind of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> you would get if they were neither fearful nor angry (which would correspond to a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04"> of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04">, right in the middle of the scale. <br>
+<br>
+Next, try changing their mood by moving the third slider bar into the negative (thus making them more fearful) or positive (making them more angry), and watch what happens to their </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04">.</font><br>
+<br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Blending from Maximum to a Value</B></font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04">OK, now let's try something else. What if we use </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Maxi</font><font face="Bookman Old Style" class="fsx04"> in place of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Mini</font><font face="Bookman Old Style" class="fsx04"> in the above example:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Maxi</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">y</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Here's the visualization:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t29-c.png" width="520" height="152"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Or, to express it verbally, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> starts at </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Maxi</font><font face="Bookman Old Style" class="fsx04"> and moves towards </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><font face="Bookman Old Style" class="fsx04"> in proportion to</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> y</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+<br>
+You would use this construction if you want to stack the deck in favor of making something likely to happen, but you want to mediate it with key personality, relationship, or other Attributes that might make a difference in rare cases. For instance, suppose you are creating a mystery storyworld and an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> has to decide whether to deceive the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Protagonist</font><font face="Bookman Old Style" class="fsx04"> (</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">). <br>
+<br>
+Let's assume </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">, on the basis of <I>turnabout is fair play</I>, bases their decision on how deceitful </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> appears to be (note that this would be the <I>inverse</I> of </font><font face="Bookman Old Style" class="fsx04" color="#006080">PFalse_Honest</font><font face="Bookman Old Style" class="fsx04">), mediated by their confidence in </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">'s perceived level of honesty.</font><br>
+<font face="Bookman Old Style" class="fsx04">Let's make it so that the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> is predisposed toward </font><font face="Bookman Old Style" class="fsx04" color="#008000">deceiving</font><font face="Bookman Old Style" class="fsx04"> the detective (perhaps they are protecting a lover or family member, and don't trust the detective to play fair). They base their decision how deceitful </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> appears to be (note that this would be the inverse of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PFalse_Honest</font><font face="Bookman Old Style" class="fsx04">), mediated by their confidence in their assessment of </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">'s deceitfulness.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#008000">decide to deceive:</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> <br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Maxi</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BInverse of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PFalse_Honest of: </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">CFalse_Honest of: </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">The script is saying this: if </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> trusts </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> a lot, and has a high degree of confidence in that assessment, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> will be unlikely to deceive </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">. For instance, if </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> perceives </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">'s honesty as a strong </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.4</font><font face="Bookman Old Style" class="fsx04">, and a very high degree of confidence in that assessment, say a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">CFalse_Honest </font><font face="Bookman Old Style" class="fsx04">of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.8</font><font face="Bookman Old Style" class="fsx04">, their likelihood to deceive </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> is pretty low: </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.25</font><font face="Bookman Old Style" class="fsx04">. Otherwise, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> is very likely to deceive </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+As with the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Jack-The-Ripper</font><font face="Bookman Old Style" class="fsx04"> Mini-Blend example above, start with a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> script that looks like this:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp; Blend of:</font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Maxi</font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BInverse of:</font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PFalse_Honest of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ThisSubject</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CFalse_Honest of</font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ThisSubject</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Set the first slider to the maximum possible amount, and move the second and third sliders in accordance with an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">'s perception of another's deceptiveness, and their confidence in that evaluation, and see if you get the final result you expect for in </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04">. Does the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> to deceive go up and down as you would expect it?</font><br>
+<br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Blending Between A Value and Zero</B></font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Now let's try another variation:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">y</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t29-d.png" width="515" height="145"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> starts at </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04" color="#800000"> </font><font face="Bookman Old Style" class="fsx04">and moves toward </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">x</font><font face="Bookman Old Style" class="fsx04"> in proportion to</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> y</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+The simple rule is this: </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000"><B><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blend</I></B></font><font face="Bookman Old Style" class="fsx04"><B><I> starts with the first argument and moves toward the second argument in <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proportion to the third argument.</I></B></font><br>
+<br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Blending Between Two Values, Using Zero</B></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Here's a variation on </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> that is used in BoP2K:&nbsp; We have a country evaluating a deal. it has to evaluate two factors: the value of what it's getting, and the value of what it's giving. The value of what it's getting depends on two factors: how much it desires that outcome (</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PUndesirable_Desirable</font><font face="Bookman Old Style" class="fsx04">), and the likelihood that it will happen (</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PInfluence</font><font face="Bookman Old Style" class="fsx04">). So the Script looks like this:</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of:<br>
+&nbsp;&nbsp; PUndesirable_Desirable of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#c00000">&nbsp;&nbsp; 0.0</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PInfluence of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Owner of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">There are three arguments to the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> Operator. The first argument represents how much the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> desires </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><font face="Bookman Old Style" class="fsx04">. However, the deal doesn't actually deliver </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><font face="Bookman Old Style" class="fsx04">&#8212;it means only that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> will attempt to induce the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Owner</font><font face="Bookman Old Style" class="fsx04"> of </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><font face="Bookman Old Style" class="fsx04"> to deliver it. So we must take into account the likelihood that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> will succeed in his attempt. That depends upon how much influence that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> has over the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Owner</font><font face="Bookman Old Style" class="fsx04"> of </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+Now, if </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> were 100% certain that he'd get </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><font face="Bookman Old Style" class="fsx04">, then the net desirability would be the desirability of </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><font face="Bookman Old Style" class="fsx04">&#8212;but in fact the chances of getting </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><font face="Bookman Old Style" class="fsx04"> are less than 100%, so the net desirability is less than the actual desirability of </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This5Prop</font><font face="Bookman Old Style" class="fsx04">. How much less? That depends on the probability of success. If the probability of success is zero, then the net desirability is zero&#8212;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> won't get anything out of the deal. So we </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PUndesirable_Desirable</font><font face="Bookman Old Style" class="fsx04"> with </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04">, and the BlendingRatio will be the likelihood of success (</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PInfluence</font><font face="Bookman Old Style" class="fsx04">). </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="images/t29-f.png" width="520" height="203"></center></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Remember, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> starts with the first argument, and moves from the second argument towards it, in proportion to the third argument. Hence, the result will move from </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PUndesirable_Desirable </font><font face="Bookman Old Style" class="fsx04">toward </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0 </font><font face="Bookman Old Style" class="fsx04">in proportion to </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PInfluence</font><font face="Bookman Old Style" class="fsx04">.</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><hr></font><br>
+<font face="Bookman Old Style" class="fsx02">Previous tutorial:&nbsp; <a href="t-d-07-blend.html">All You Need Is Blend (part 1)</a><br><br><div align="right">This is the last tutorial in this group.&nbsp; The next group, <B>The Story Engine</B>, begins with:&nbsp; <a href="t-e-01-engine-operation-overview.html">Main Engine Loop</a><br><br></div></font><div align="left"><font face="Bookman Old Style" class="fsx04"><hr><br></font></div>
+</div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Odds & Ends</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:1004px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj32 {position:absolute;z-index:1;visibility:visible;text-align:left;left:414px;top:71px;width:400px;height:27px;}
+#Oobj33 {position:absolute;z-index:2;visibility:visible;text-align:left;left:241px;top:121px;width:747px;height:2169px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:0px;width:200px;height:151px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:227px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:239px;top:0px;width:750px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:227px;top:27px;width:775px;height:28px;}
+
+input,textarea,select {color:#000000;font-family:'Arial';font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Arial';font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Arial';font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj32">
+<div id="Ggeo85" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>27. Odds &amp; Ends<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj33">
+<div id="Ggeo86" class="dfltt">
+<font face="Bookman Old Style" class="fsx05">Who’s “Fate”?</font><br>
+<br>
+<font face="Bookman Old Style">Fate is the most important Actor in every storyworld. In fact, Fate is so important that you can’t delete him -- he’s a permanent fixture. <br>
+<br>
+You know how, in so many movies, the bad guy gets the better of the good guy, who’s now hanging by his fingernails at the edge of the cliff, and the bad guy laughs demonically and lifts his foot to start mashing the good guy’s fingers, when suddenly a bolt of lightning hits the bad guy and he falls over the cliff and disappears screaming? Have you ever wondered, who killed the bad guy? The answer, of course, is Fate. He’s the guy who makes things happen in every story. In Storytronics, nothing ever “just happens” -- Fate makes it happen. No Event can exist without a Subject, and Fate is always the subject of those events that aren’t executed by any other Actor.<br>
+<br>
+More precisely, however, YOU are Fate. After all, you’re the author of the storyworld. You’re the one who makes things happen. You are the god who controls the universe of the storyworld. And that makes you Fate. Flex your muscles.<br>
+<br>
+<br>
+<B>Abort Scripts</B><br>
+<br>
+Very rarely, you’ll encounter a situation in which you need an Actor to abort an already-established Plan. For example, suppose that Tom decides to poison Mary and the first step of his scheme is to cook the poison, which takes several hours. While the poison is cooking, Mary comes by to visit and sincerely apologizes for her past transgressions against Tom. They kiss and make up. However, the poison is still cooking and when the cooking is complete, Tom has a Plan in place to put the poison into Mary’s tea. How do you prevent this from happening? <br>
+<br>
+The old way was to insert some sort of test in the Inclination Script that asked “Gee, has Mary apologized for her transgressions?” This turned out to be clumsy, and the Scripts necessary to make it work were long and complicated. So we designed a better system: the Abort Script. This Script is so rarely needed that we don’t make it an automatic part of the normal scripting process. Instead, it is optional. To turn on the Abort Script, you have to open the Properties box for the Verb and check the “Abort” checkbox therein. This places a new Script button (Abort) above the Consequences menu button. This Script takes a boolean value; if it evaluates to TRUE, then execution of the Plan containing that Verb will be aborted. The Abort Script is checked for each Plan containing that Verb. This way, Tom could abort poisoning Mary and two minutes later, John could proceed with poisoning Jane.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<B>Spying</B><br>
+<br>
+What drama would be complete without somebody spying on somebody else? You can make this happen in your storyworlds by using the Consequence Script SetActor: SetSpyingOn. <br>
+<br>
+This Operator takes three arguments:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spy: the Actor who should do the spying<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SpiedUpon: the Actor who should be spied upon<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HowLong: the number of minutes that the Spy should continue spying<br>
+<br>
+<br>
+Once this Script executes, the Spy follows SpiedUpon around and witnesses every overt action taken by SpiedUpon, but remains invisible to SpiedUpon. Spy cannot witness Events with Verbs of audience type MentalEvent or CheekByJowl, but does witness anything that a regular witness would see -- without SpiedUpon knowing that he’s being observed.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx05">Boxes</font><br>
+<br>
+<font face="Bookman Old Style">These are temporary places to store intermediate values; they save you time and tedium. There are two kinds of boxes, Verb boxes and Role boxes. The Verb boxes are calculated in the Consequences and can be used by any calculation in any Role used by that Verb. Role boxes can be used in the Role calculations and their internal Options. There are Boxes for each of the major data types: Actors, Props, Stages, Events, and Verbs, as well as one BNumber box. There are also four Global Box sets, again with one Box for each of the listed data types. These Boxes never forget the values you put into them; if you store something into a Box during one calculation, you can come back to it much later in a completely different calculation and it will still have that value in it. Be warned: it is all too easy to get into trouble using Global Boxes. We strongly urge you that, if you want to use any Global Boxes, then decide at the very beginning exactly what that Global Box will hold and never, ever change that in mid-stream. Otherwise, you’ll get confused about the meaning of the Global Box and create monster headaches for yourself. </font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx05">BNumbers to UNumbers Transform</font><br>
+<br>
+<font face="Bookman Old Style">This is just for you techies who want to know the gory mathematical details. Here’s the </font><font face="Bookman Old Style" color="#ff0000">BNumber</font><font face="Bookman Old Style"> to real number transform:<br>
+<br>
+<center><img src="http://www.storytron.com/Tutorial/images/t27-a.jpg" width="301" height="223"></center><br>
+<br>
+<center><img src="http://www.storytron.com/Tutorial/images/t27-b.jpg" width="295" height="151"></center></font><br>
+<br>
+<font face="Bookman Old Style" color="#ff0000">UNumbers</font><font face="Bookman Old Style"> are </font><font face="Bookman Old Style" color="#ff0000">BNumbers</font><font face="Bookman Old Style"> squashed into the positive side of the scale<br><br></font><div align="left"><font face="Bookman Old Style"><hr><br></div></font><div align="center"><font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="http://www.storytron.com/Tutorial/t26-more-special-operators.html">#26 - More Special Operators</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="http://www.storytron.com/Tutorial/t28-engine-operation-detail.html">#28 - Engine Operation in Detail</a><br></font></div>
+</div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

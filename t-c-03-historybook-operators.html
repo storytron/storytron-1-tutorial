@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - HistoryBook Operators</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj28 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:66px;width:400px;height:49px;}
+#Oobj29 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:126px;width:767px;height:4121px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj62 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:4080px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj28">
+<div id="Ggeo80" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+HistoryBook Operators<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj29">
+<div id="Ggeo81" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">The HistoryBook is an especially useful feature; it's a record of every </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> that has taken place in the play of your storyworld. Think of it as "the history of the storyworld so far." You can look up </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Events</font><font face="Bookman Old Style" class="fsx04"> in the HistoryBook to recall exactly what happened. Here are the Operators you can use:<br>
+<br>
+<br>
+<B>EventHappened</B> <br>
+<br>
+This is a boolean Operator; it returns a simple yes-or-no answer to the question "Did the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> fitting this description ever take place?" It takes a single argument, another boolean, that provides the description in proper form. Here's an example:<br>
+<br>
+EventHappened<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">PastSubject of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameVerb <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#008000">punch</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#008000">PastVerb of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This means, <I>Has any </I></font><font face="Bookman Old Style" class="fsx04" color="#00c0ff"><I>Event</I></font><font face="Bookman Old Style" class="fsx04"><I> ever happened in which the </I></font><font face="Bookman Old Style" class="fsx04" color="#0000ff"><I>Subject</I></font><font face="Bookman Old Style" class="fsx04"><I> was the </I></font><font face="Bookman Old Style" class="fsx04" color="#0000ff"><I>ReactingActor</I></font><font face="Bookman Old Style" class="fsx04"><I> and the </I></font><font face="Bookman Old Style" class="fsx04" color="#008000"><I>Verb </I></font><font face="Bookman Old Style" class="fsx04"><I>was "</I></font><font face="Bookman Old Style" class="fsx04" color="#008000"><I>punch</I></font><font face="Bookman Old Style" class="fsx04"><I>?"</I> You may be a little confused by the use of "</font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><font face="Bookman Old Style" class="fsx04">." Remember, when we ask the Engine to look for "any </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">," we are telling it to look at each and every </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> to make a decision; that decision has to consider each </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> individually. "</font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><font face="Bookman Old Style" class="fsx04">" is that "each </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> individually." So we could expand the terse description above into the following more specific version:<br>
+<br>
+<I>Engine, I want you to examine each and every </I></font><font face="Bookman Old Style" class="fsx04" color="#00c0ff"><I>Event</I></font><font face="Bookman Old Style" class="fsx04"><I> in the whole HistoryBook. When you look at each </I></font><font face="Bookman Old Style" class="fsx04" color="#00c0ff"><I>Event</I></font><font face="Bookman Old Style" class="fsx04"><I>, we'll call that </I></font><font face="Bookman Old Style" class="fsx04" color="#00c0ff"><I>Event</I></font><font face="Bookman Old Style" class="fsx04"><I> you're looking at "</I></font><font face="Bookman Old Style" class="fsx04" color="#00c0ff"><I>CandidateEvent</I></font><font face="Bookman Old Style" class="fsx04"><I>." Now, I want you to get the </I></font><font face="Bookman Old Style" class="fsx04" color="#0000ff"><I>Subject</I></font><font face="Bookman Old Style" class="fsx04"><I> and </I></font><font face="Bookman Old Style" class="fsx04" color="#008000"><I>Verb</I></font><font face="Bookman Old Style" class="fsx04"><I> of that </I></font><font face="Bookman Old Style" class="fsx04" color="#00c0ff"><I>CandidateEvent</I></font><font face="Bookman Old Style" class="fsx04"><I>. If the </I></font><font face="Bookman Old Style" class="fsx04" color="#0000ff"><I>Subject</I></font><font face="Bookman Old Style" class="fsx04"><I> of that </I></font><font face="Bookman Old Style" class="fsx04" color="#00c0ff"><I>CandidateEvent</I></font><font face="Bookman Old Style" class="fsx04"><I> is the </I></font><font face="Bookman Old Style" class="fsx04" color="#0000ff"><I>ReactingActor</I></font><font face="Bookman Old Style" class="fsx04"><I>, and the </I></font><font face="Bookman Old Style" class="fsx04" color="#008000"><I>Verb</I></font><font face="Bookman Old Style" class="fsx04"><I> is "</I></font><font face="Bookman Old Style" class="fsx04" color="#008000"><I>punch</I></font><font face="Bookman Old Style" class="fsx04"><I>," then return "true."</I><br>
+<br>
+We also provide a handy little helper Operator: MainClauseIs. We learned in practice that many of our EventHappened Operators ended up looking like this:<br>
+<br>
+EventHappened <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">PastSubject of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameVerb <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#008000">punch</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#008000">PastVerb of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameActor <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">PastDirObject of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Over and over again, we found ourselves specifying the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Subject</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> of the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">PastEvent</font><font face="Bookman Old Style" class="fsx04">. This became rather tiresome, so we came up with this handy-dandy little shortcut:<br>
+<br>
+EventHappened <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MainClauseIs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#008000">punch</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This means exactly the same thing as the previous version, but it's a lot easier to use.<br>
+<br>
+Why would you use </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">EventHappened</font><font face="Bookman Old Style" class="fsx04">? Normally you use it to check whether some </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> has taken place that would be required for a later choice to be made. For example, suppose that you don't want the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Prince</font><font face="Bookman Old Style" class="fsx04"> to be able to rescue the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Princess</font><font face="Bookman Old Style" class="fsx04"> until <I>after</I> the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Dragon</font><font face="Bookman Old Style" class="fsx04"> has been slain? </font><font face="Bookman Old Style" class="fsx04">Then you might have an Inclination Script for the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">rescue</font><font face="Bookman Old Style" class="fsx04"> looking something like this: </font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">PickUpperIf</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; EventHappened <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MainClauseIs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Prince</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#008000">slay</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Dragon</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp; Maxi<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Mini</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>LookupEvent</B><br>
+<br>
+This is what you use to answer questions such as "Is this the same </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Prop</font><font face="Bookman Old Style" class="fsx04"> that the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Subject</font><font face="Bookman Old Style" class="fsx04"> used to hit the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor </font><font face="Bookman Old Style" class="fsx04">previously?"&nbsp; Here is how it is typically used:<br>
+<br>
+AreSameProp<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This4Prop<br>
+&nbsp;&nbsp;&nbsp; Past4Prop of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff00ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">LookupEvent of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff00ff">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MainClauseIs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#008000">hit with</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff00ff">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AreSameProp</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">This4Prop<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Past4Prop of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#00c0ff">LookupEvent</font><font face="Bookman Old Style" class="fsx04"> is found under the History Operators menu.&nbsp; <br>
+<br>
+Here's a fine point about </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">LookupEvent</font><font face="Bookman Old Style" class="fsx04">: it searches backwards from the present and stops at the first </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> it finds that meets the specifications. This means that it will find the <I>most recent</I> </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> that meets the specs.<br>
+<br>
+<br>
+<B>CountEvents</B><br>
+<br>
+This Operator answers the question "How many times has this happened before?" For example, you might want to have </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Charlie Brown</font><font face="Bookman Old Style" class="fsx04"> ask himself, "How many times has </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Lucy</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">yanked the football </font><font face="Bookman Old Style" class="fsx04">away when I ran to kick it?" Presumably this would be used in a Script like this:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#008000">Offer to hold football</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">CharlieBrown</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#008000">refuse to kick football</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Number2BNumber of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#c00000">quotient of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CountEvents of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MainClauseIs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Lucy</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#008000">yank football</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Charlie Brown</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#800000">100</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">There are several important things to notice about this script.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">First, note that the entire clause starts off with the Operator </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Number2BNumber</font><font face="Bookman Old Style" class="fsx04">. You might ask why we need this. If you'll recall from our tutorial on <a href="t-a-10-attributes.html">Attributes</a>, all traits are </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumbers</font><font face="Bookman Old Style" class="fsx04">, and range from </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-1.0 </font><font face="Bookman Old Style" class="fsx04">to </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+1.0</font><font face="Bookman Old Style" class="fsx04">. Again, we do this to be sure we are always comparing apples to apples, and making it easier to keep our scripts contained within a similar range of values. But a storyworld's Events don't range between </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-1 </font><font face="Bookman Old Style" class="fsx04">and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+1</font><font face="Bookman Old Style" class="fsx04">. They range from </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0</font><font face="Bookman Old Style" class="fsx04"> on up to </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">100</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">1,000 </font><font face="Bookman Old Style" class="fsx04">or more. To use </font><font face="Bookman Old Style" class="fsx04" color="#c00000">CountEvents</font><font face="Bookman Old Style" class="fsx04"> (or any regular number) in a script, we must first convert it to a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04">.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Second, note that we divide </font><font face="Bookman Old Style" class="fsx04" color="#c00000">CountEvents</font><font face="Bookman Old Style" class="fsx04"> by </font><font face="Bookman Old Style" class="fsx04" color="#800000">100</font><font face="Bookman Old Style" class="fsx04">, using the Operator quotient. This is basically saying that </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Charlie Brown </font><font face="Bookman Old Style" class="fsx04">is in fact capable of learning from his mistakes, albeit rather slowly. If we wanted to make him a quicker learner, we'd do this by making the </font><font face="Bookman Old Style" class="fsx04" color="#800000">100</font><font face="Bookman Old Style" class="fsx04"> a smaller </font><font face="Bookman Old Style" class="fsx04">number&#8212;say, 10&#8212;or even eliminate the quotient </font><font face="Bookman Old Style" class="fsx04">altogether, and just have </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Number2BNumber</font><font face="Bookman Old Style" class="fsx04"> of: </font><font face="Bookman Old Style" class="fsx04" color="#c00000">CountEvents</font><font face="Bookman Old Style" class="fsx04">. </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Charlie Brown's </font><font face="Bookman Old Style" class="fsx04">inclination to refuse to kick the football would increase a good deal more rapidly in that case.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>"Causal" tests</B><br>
+<br>
+There is also a corresponding set of Operators that use a slightly different way of searching the HistoryBook. All the Operators above start at the current </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> and work backwards in time. "Causal" tests (CausalEventHappened, LookupCausalEvent, CountCausalEvents) only follow the chain of causality backwards. These tests ignore unrelated </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Events</font><font face="Bookman Old Style" class="fsx04"> and look only at those </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Events</font><font face="Bookman Old Style" class="fsx04"> that are directly in the chain of causality leading to the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> being reacted to. This is a more precisely targeted test that is necessary when you want to make sure that you're not fooled by an </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> that meets your specs but is, by some strange chance, unrelated to the current </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+<br>
+<B>ElapsedTimeSince</B><br>
+<br>
+This is another rarely-used Operator; you use it to find out how much time has passed since an </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> took place. Example:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#008000">Offer donut</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#008000">accept donut</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Number2BNumber of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#c00000">ElapsedTimeSince</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameActor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">PastSubject of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AreSameVerb<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#008000">eat donut</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#008000">PastVerb of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">CandidateEvent</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+The </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination</font><font face="Bookman Old Style" class="fsx04"> to </font><font face="Bookman Old Style" class="fsx04" color="#008000">accept the donut </font><font face="Bookman Old Style" class="fsx04">is proportional to how much time has passed since he last </font><font face="Bookman Old Style" class="fsx04" color="#008000">ate a donut</font><font face="Bookman Old Style" class="fsx04">.&nbsp; </font><font face="Bookman Old Style" class="fsx04">(Notice that when counting time, as with counting </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Events</font><font face="Bookman Old Style" class="fsx04">, we have to convert the regular number to a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumber</font><font face="Bookman Old Style" class="fsx04"> in order to use it in the script.)</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>IHaventDoneThisBefore</B><br>
+<br>
+This is a particularly useful Operator that is meant to obviate repetitious behavior. What's neat about it is that it's so smart. You can bury it inside a </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> and it will look for matches right up to and including that </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">, but it will ignore anything beyond it. In other words, you don't have to specify the contents of the </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSockets</font><font face="Bookman Old Style" class="fsx04">; it automatically fills them in for you. That's probably confusing, so here's an example. Suppose that you are having a conversation with another </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> about a third party. You've been comparing notes about the various </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attributes</font><font face="Bookman Old Style" class="fsx04"> of that third party. You don't want to ask about an </font><font face="Bookman Old Style" class="fsx04" color="#006080">Attribute</font><font face="Bookman Old Style" class="fsx04"> that you've previously asked about. You could do this with LookUpCausalEvent, but there's an easier way:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#008000">agree to talk</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#008000">gossip about</font><font face="Bookman Old Style" class="fsx04">: </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">ActorAttribute: </font><font face="Bookman Old Style" class="fsx04">Acceptable<br>
+<br>
+IHaventDoneThisBefore<br>
+<br>
+That's all it takes!&nbsp; </font><font face="Bookman Old Style" class="fsx04">This Operator can only be used within an </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04">, so you will notice that it does not appear in the History menu under, for instance, AssumeRoleIf or Emotional Reaction scripts.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>IHaventDoneThisSince</B><br>
+<br>
+This is a variation on IHaventDoneThisBefore, but it adds a backwards time limit. It means "I haven't done this in the last X moments."&nbsp; </font><font face="Bookman Old Style" class="fsx04">As with IHaventDoneThisBefore, this Operator can only be used within an </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04">.<br><br></font><div align="left"><font face="Bookman Old Style"><hr><br></div></font><div align="center"><font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-c-02-special-operators.html">Special Operators</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-c-04-more-special-operators.html">More Special Operators</a><br><br></div></font><div align="left"><font face="Bookman Old Style"><hr><br></font></div>
+</div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

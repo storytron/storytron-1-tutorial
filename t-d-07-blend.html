@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - All You Need is Blend (part 1)</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj40 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:66px;width:400px;height:49px;}
+#Oobj41 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:121px;width:766px;height:1696px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj64 {position:absolute;z-index:7;visibility:visible;text-align:left;left:221px;top:1754px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj40">
+<div id="Ggeo94" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+All You Need is Blend (part 1)<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj41">
+<div id="Ggeo95" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">In <a href="t-c-02-special-operators.html">Special Operators</a>, we talked a little about </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> and the kinds of things it lets you do. The </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> Operator is far and away the most useful tool for calculations with </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumbers</font><font face="Bookman Old Style" class="fsx04">. With this one Operator, you can perform just about all of the common calculations we find in Scripts.<br>
+<br>
+<br>
+<B>Averaging Two </B></font><font face="Bookman Old Style" class="fsx04" color="#ff0000"><B>BNumbers</B></font><font face="Bookman Old Style" class="fsx04"><B> (with or without a Bias)</B></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04">'s most frequent use is to take two values and find a value between them, or in other words, to average them. It also allows you to put your thumb on the scale toward one or the other value, by use of the third term, the bias factor. For instance, let's suppose you have a family drama sequence in which a character, a ne'er-do-well, gets into trouble and has to go around begging family members for help. All family members have to decide whether to intervene for him. Let's further suppose you want each family member to take into account both how close their kinship is to the begging </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">, as well as how much affection they have for him.<br>
+<br>
+The script might look like this:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#008000">beg for help:</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">beggee: </font><font face="Bookman Old Style" class="fsx04" color="#008000">intervene on behalf of: </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Inclination <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Blend of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kinship of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ThisSubject </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PNasty_Nice of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ThisSubject </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">In this example, the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> who has to make a decision whether to </font><font face="Bookman Old Style" class="fsx04" color="#008000">intervene </font><font face="Bookman Old Style" class="fsx04">is the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> and the ne'er-do-well who has just </font><font face="Bookman Old Style" class="fsx04" color="#008000">begged for help</font><font face="Bookman Old Style" class="fsx04"> is </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">.&nbsp; Notice that this script assumes the degree of </font><font face="Bookman Old Style" class="fsx04" color="#006080">Kinship</font><font face="Bookman Old Style" class="fsx04"> is equally important to the outcome as the degree of affection </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> has for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">. But you can also use the bias factor to change the balance. Let's walk through some examples.<br>
+<br>
+(1) In the example above, if </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Kinship</font><font face="Bookman Old Style" class="fsx04"> is </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.5</font><font face="Bookman Old Style" class="fsx04"> (</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> are cousins) but </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PNasty_Nice</font><font face="Bookman Old Style" class="fsx04"> is </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.5</font><font face="Bookman Old Style" class="fsx04"> (</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> actively dislikes </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">), you get this:</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of: </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.5</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.5</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This yields a result of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04">&#8212;the average of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.5</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.5</font><font face="Bookman Old Style" class="fsx04">. In this scenario, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> might intervene for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">. But don't bet your life savings on it; there's only a 50/50 chance that it'll happen, all other things being equal. This is what you get when you place equal importance on </font><font face="Bookman Old Style" class="fsx04" color="#006080">Kinship</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#006080">PNasty_Nice</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+(2) You can also do weighted averages, which give greater weight to one of the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> factors. Let's try making the degree of </font><font face="Bookman Old Style" class="fsx04" color="#006080">Kinship</font><font face="Bookman Old Style" class="fsx04"> a little more important than </font><font face="Bookman Old Style" class="fsx04" color="#006080">PNasty_Nice</font><font face="Bookman Old Style" class="fsx04">. In this case, as above, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> are still cousins (</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Kinship</font><font face="Bookman Old Style" class="fsx04"> is </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.5</font><font face="Bookman Old Style" class="fsx04">), and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> still dislikes </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> (</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PNasty_Nice</font><font face="Bookman Old Style" class="fsx04"> is </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.5</font><font face="Bookman Old Style" class="fsx04">), but we change the bias factor to +0.2&#8212;that is, we put our thumb on the scales and tip the result toward the first term, </font><font face="Bookman Old Style" class="fsx04" color="#006080">Kinship</font><font face="Bookman Old Style" class="fsx04">. </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of: </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.5</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.5</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.2</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">(The </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.2</font><font face="Bookman Old Style" class="fsx04"> means we are biasing toward the first term, </font><font face="Bookman Old Style" class="fsx04" color="#006080">Kinship</font><font face="Bookman Old Style" class="fsx04">. If we used a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.2</font><font face="Bookman Old Style" class="fsx04">, we'd be biasing toward the second term, </font><font face="Bookman Old Style" class="fsx04" color="#006080">PNasty_Nice</font><font face="Bookman Old Style" class="fsx04">.)<br>
+<br>
+This yields a result of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.1</font><font face="Bookman Old Style" class="fsx04">, because the bias factor of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.2</font><font face="Bookman Old Style" class="fsx04"> gives slightly greater weight to the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">+0.5</font><font face="Bookman Old Style" class="fsx04">. </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> is a bit more likely to help his irritating cousin out.<br>
+<br>
+(3) What if we want to make </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#006080">PNasty_Nice</font><font face="Bookman Old Style" class="fsx04"> for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> more important than than </font><font face="Bookman Old Style" class="fsx04" color="#006080">Kinship</font><font face="Bookman Old Style" class="fsx04">?</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of: <br>
+&nbsp;&nbsp;&nbsp;&nbsp; +0.5<br>
+&nbsp;&nbsp;&nbsp;&nbsp; -0.5<br>
+&nbsp;&nbsp;&nbsp;&nbsp; -0.6</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">A </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.6</font><font face="Bookman Old Style" class="fsx04"> biases the result strongly toward the second term, </font><font face="Bookman Old Style" class="fsx04" color="#006080">PNasty_Nice</font><font face="Bookman Old Style" class="fsx04">. This yields a result of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.3</font><font face="Bookman Old Style" class="fsx04">. In this case, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> is quite a bit less likely to help out his or her irritating cousin than in either of the prior two examples.<br>
+<br>
+If you play around with the </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> operator in Scryptalyzer you can see this principle at work.</font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><hr></font><br>
+<font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-d-06-bnumbers-unumbers-numbers.html">BNumbers, UNumbers, and Numbers</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-d-08-blend2.html">All You Need Is Blend (part 2)</a></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><hr><br></font></div>
+</div>
+
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

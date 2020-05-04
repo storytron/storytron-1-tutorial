@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Special Operators</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj26 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:66px;width:400px;height:71px;}
+#Oobj27 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:121px;width:767px;height:3568px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj61 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:3608px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj26">
+<div id="Ggeo78" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Special Operators<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj27">
+<div id="Ggeo79" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">We provide a bunch of special Operators in Sappho to make your life easier. Here are their definitions:<br>
+<br>
+<br>
+<B>This___, Past___, Chosen___</B><br>
+<br>
+These are large groups of operators that apply to specific </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSockets</font><font face="Bookman Old Style" class="fsx04"> (as well as some other parts) of the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">.&nbsp; </font><font face="Bookman Old Style" class="fsx04">There's an Operator called </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">, which returns the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Subjec</font><font face="Bookman Old Style" class="fsx04">t of the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> that has just taken place. </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><font face="Bookman Old Style" class="fsx04"> refers to the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> of the selfsame </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">. And so on through all the other </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSockets</font><font face="Bookman Old Style" class="fsx04"> (e.g., </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">This4Actor</font><font face="Bookman Old Style" class="fsx04">, </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">This5Stage</font><font face="Bookman Old Style" class="fsx04">, etc.).&nbsp; </font><font face="Bookman Old Style" class="fsx04">But there are even more Operators of this sort:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#c00000">ThisTime: </font><font face="Bookman Old Style" class="fsx04">the time at which this </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> took place.</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff8000">ThisLocation</font><font face="Bookman Old Style" class="fsx04">: the </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Stage</font><font face="Bookman Old Style" class="fsx04"> on which this </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> took place.</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#c00000">ThisPageNumber:</font><font face="Bookman Old Style" class="fsx04"> the page number of this </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">.</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#00c0ff">ThisCausalEvent</font><font face="Bookman Old Style" class="fsx04">: the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> that caused this </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> to happen.<br>
+ThisHijacked: whether or not this </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> has been hijacked.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">We also have Past___ versions of all the This___ Operators, covering exactly the same material. The only difference is that the Past___ Operator takes an </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> as its argument. You have to specify the past </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> that you are referring to, like so:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">PastSubject of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">ThisCausalEvent</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This Operator returns the Subject of the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> that caused </font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff">ThisEvent</font><font face="Bookman Old Style" class="fsx04">.</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Notice what that tells you about </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">ThisCausalEvent</font><font face="Bookman Old Style" class="fsx04">. If </font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff">ThisEvent</font><font face="Bookman Old Style" class="fsx04"> is the event that has just happened, </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">ThisCausalEvent</font><font face="Times New Roman" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04"> is the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> immediately before that. Let's take an example of a set of interactions:</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; 1. </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">punches</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; 2. </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">passes out</font><font face="Times New Roman" class="fsx04" color="#008000"> </font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; 3. </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#008000">calls</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">the police</font><font face="Times New Roman" class="fsx04" color="#0000ff"> </font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04">So, if you are writing scripts to tell the Engine what it should do next for the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> calls, </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">ThisEvent</font><font face="Bookman Old Style" class="fsx04"> would be </font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff">Event #3</font><font face="Bookman Old Style" class="fsx04"> above, "Mary calls the police," which means </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> is </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><font face="Bookman Old Style" class="fsx04"> is </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">the police</font><font face="Bookman Old Style" class="fsx04">. </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">ThisCausalEvent</font><font face="Bookman Old Style" class="fsx04"> would be </font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff">Event #2</font><font face="Bookman Old Style" class="fsx04">, "Joe passes out." The </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">PastSubject </font><font face="Bookman Old Style" class="fsx04">of </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">ThisCausalEvent</font><font face="Bookman Old Style" class="fsx04"> would be </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04">.<br>
+<br>
+Here's a challenge: Assume that </font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff">ThisEvent</font><font face="Bookman Old Style" class="fsx04"> is </font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff">Event #3</font><font face="Bookman Old Style" class="fsx04">. What is the value of:<br>
+&nbsp;</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">PastSubject of: </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#2bc0ff">&nbsp;&nbsp;&nbsp;&nbsp; PastCausalEvent of: </font><br>
+<font face="Bookman Old Style" class="fsx04" color="#2bc0ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ThisCausalEvent</font><font face="Bookman Old Style" class="fsx04"> <br>
+<br>
+(Answer: </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred)</font><font face="Bookman Old Style" class="fsx04"> <br>
+<br>
+This is a good example of a simple situation. However, in more complicated storyworlds, there can be simultaneous activity in different </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Stages</font><font face="Bookman Old Style" class="fsx04">, so it is not necessarily true that </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">ThisCausalEvent</font><font face="Bookman Old Style" class="fsx04"> immediately precedes </font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff">ThisEvent</font><font face="Bookman Old Style" class="fsx04">; there could be other </font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff">Events</font><font face="Bookman Old Style" class="fsx04"> from other </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Stages</font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff"> </font><font face="Bookman Old Style" class="fsx04">between these two </font><font face="Bookman Old Style" class="fsx04" color="#2bc0ff">Events</font><font face="Bookman Old Style" class="fsx04">.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Finally, there are the Chosen___ Operators. These are a little tricky. Their purpose is to let you use decisions that you make in one </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">, in a later </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">. They store the values of the </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSockets</font><font face="Bookman Old Style" class="fsx04"> that you have already decided upon in your Option scripts. You can't use these Operators in any place except the Inclination or </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> Acceptable and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Desirable</font><font face="Bookman Old Style" class="fsx04"> scripts inside any Option. SWAT won't let you use the Chosen___ Operators improperly. And SWAT will only let you use Chosen___ Operators for </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSockets</font><font face="Bookman Old Style" class="fsx04"> that precede the </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> in which you're working. </font><font face="Bookman Old Style" class="fsx04">So if you're writing a Script for the </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04"> </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">5Prop</font><font face="Bookman Old Style" class="fsx04"> then you can use </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ChosenDirObject</font><font face="Bookman Old Style" class="fsx04"> or </font><font face="Bookman Old Style" class="fsx04" color="#ff8000">Chosen4Stage</font><font face="Bookman Old Style" class="fsx04"> (if they exist), but you couldn't use </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Chosen9Actor</font><font face="Bookman Old Style" class="fsx04">, because it hasn't been decided as of the time of execution of the Script you're working on. </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">For these purposes, Inclination is the last Script executed, so you can use any of the Chosen___ Operators in the Inclination Script.<br>
+<br>
+<br>
+<B>Blending Operators</B><br>
+<br>
+Blending Operators allow you to mix numbers together in differing ratios. They serve a number of useful purposes. Suppose, for example, that you want to write an Inclination Script for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04">'s inclination to punch </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04">, based on two factors: how angry </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04"> is, and how much </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04"> likes </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04">. You want to mix the two factors together. Here's one way to write your Script (we're assuming here that PNasty_Nice measures how much the perceiver likes the perceived):</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fear_Anger</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PNasty_Nice</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This means "blend </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04">'s Fear_Anger in equal measure with </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PNasty_Nice </font><font face="Bookman Old Style" class="fsx04">for </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><font face="Bookman Old Style" class="fsx04">." </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> will return the average of the two </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumbers</font><font face="Bookman Old Style" class="fsx04">. But here's the really nice part. Suppose that, when you're testing your storyworld, it always seems as if the </font><font face="Bookman Old Style" class="fsx04" color="#006080">Fear_Anger </font><font face="Bookman Old Style" class="fsx04">part plays too big a role in the final result. Once your Actors get mad, it doesn't seem to matter how much they like a person</font><font face="Bookman Old Style" class="fsx04">&#8212;</font><font face="Bookman Old Style" class="fsx04">they start punching. You want to tone it down and put more emphasis on </font><font face="Bookman Old Style" class="fsx04" color="#006080">PNasty_Nice</font><font face="Bookman Old Style" class="fsx04">. No problem! Just change that final </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04" color="#800000"> </font><font face="Bookman Old Style" class="fsx04">to something a bit more negative. In </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04">, the final term, called the "bias factor," biases the result towards one or the other argument. A positive bias factor will put more weight on the upper argument; a negative bias factor will put more weight on the lower argument. So if you put in, say, </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.4</font><font face="Bookman Old Style" class="fsx04">, then the </font><font face="Bookman Old Style" class="fsx04" color="#006080">PNasty_Nice</font><font face="Bookman Old Style" class="fsx04"> part will get more weight in Blend than the </font><font face="Bookman Old Style" class="fsx04" color="#006080">Fear_Anger</font><font face="Bookman Old Style" class="fsx04"> part. This feature of the Blend Operator makes it especially useful for fine-tuning your storyworld.<br>
+<br>
+<br>
+<B>BlendBothily</B><br>
+<br>
+This is another blending Operator that operates in a different fashion. We won't go into the mathematical subtleties involved; We'll just give you a simple rule of thumb: use Blend most of the time. Use BlendBothily only when you want either of the two arguments to stomp out the result if it's -0.99. Here's an example of what we mean:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+0.99<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-0.99<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0</font><br>
+<font face="Bookman Old Style" class="fsx04">this returns a value of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Bookman Old Style" class="fsx04">&#8212;</font><font face="Bookman Old Style" class="fsx04">the average of the two. But look at this:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">BlendBothily of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+0.99<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-0.99<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0</font><br>
+<font face="Bookman Old Style" class="fsx04">this returns a value of </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.99 </font><font face="Bookman Old Style" class="fsx04">(actually, it returns </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">-0.86</font><font face="Bookman Old Style" class="fsx04">, but that's even trickier to explain). <br>
+BlendBothily</font><font face="Bookman Old Style" class="fsx04"> doesn't give the average of the two values. In other words, </font><font face="Bookman Old Style" class="fsx04">BlendBothily</font><font face="Bookman Old Style" class="fsx04"> would </font><font face="Bookman Old Style" class="fsx04">be only useful in cases where both factors you are considering must be on the high end of the scale. For instance, let's assume you want to create a script for an </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option</font><font face="Bookman Old Style" class="fsx04"> called </font><font face="Bookman Old Style" class="fsx04" color="#008000">beg for help</font><font face="Bookman Old Style" class="fsx04">, which the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> will only resort to if both of these conditions are met:</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; 1) they have a high degree of trust in the beggee</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; 2) they are very frightened about something</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">In such a case, the inclination script might look like this:</font><font face="Times New Roman" class="fsx04"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">BlendBothily</font><font face="Bookman Old Style" class="fsx04" color="#ff0000"> of:</font><font face="Times New Roman" class="fsx04" color="#ff0000"> <br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PFalse_Honest of:</font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Times New Roman" class="fsx04" color="#0000ff"> </font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ChosenDirObject</font><font face="Times New Roman" class="fsx04"> </font><br>
+<font face="Times New Roman" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BInverse of:</font><font face="Times New Roman" class="fsx04" color="#ff0000"> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Fearful_Angry of:</font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><br>
+<font face="Times New Roman" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Times New Roman" class="fsx04" color="#0000ff"> </font><br>
+<font face="Times New Roman" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0</font><font face="Times New Roman" class="fsx04" color="#ff0000"> </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This script says that the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Times New Roman" class="fsx04" color="#0000ff"> </font><font face="Bookman Old Style" class="fsx04">must have both a strong perception that the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ChosenDirObject</font><font face="Bookman Old Style" class="fsx04"> is trustworthy (that is, they perceive them to have a very high </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest </font><font face="Bookman Old Style" class="fsx04">value), and the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Times New Roman" class="fsx04" color="#0000ff"> </font><font face="Bookman Old Style" class="fsx04">must also be very afraid. If both are not very high numbers (far over on the right side of the number scale), then the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Option beg for help </font><font face="Bookman Old Style" class="fsx04">will not be chosen. </font><br>
+<br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><B>Poly-argument Operators</B><br>
+<br>
+A few special Operators normally take just two arguments, but in some cases you'd like to include more arguments. For example, consider BSum. It adds together two BNumbers. But suppose that you wanted to add three numbers together? Then you'd have to write something like this:<br>
+<br>
+BSum of:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BSum of:</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First BNumber<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Second BNumber<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ThirdBNumber</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This is clumsy, so we created two new summing Operators: </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BSum3</font><font face="Bookman Old Style" class="fsx04">, which adds three </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumbers</font><font face="Bookman Old Style" class="fsx04">, and </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BSum4</font><font face="Bookman Old Style" class="fsx04">, which adds four </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumbers</font><font face="Bookman Old Style" class="fsx04">. We also created similar Operators for logic: OR3, OR4, AND3, and AND4. <br>
+<br>
+There's also a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend3</font><font face="Bookman Old Style" class="fsx04"> and a </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend4</font><font face="Bookman Old Style" class="fsx04">. They differ from the regular </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend</font><font face="Bookman Old Style" class="fsx04"> in that, instead of having a single bias factor, they have separate weighting factors for each argument. Here's an example: </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Blend3 of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Fear_Anger</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">PNasty_Nice</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Fred</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#ff0000">False_Honest</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-0.5</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">This will blend all three factors together, but </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Joe</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#006080">Fear_Anger </font><font face="Bookman Old Style" class="fsx04">will get a lot of weight, his </font><font face="Bookman Old Style" class="fsx04" color="#006080">PNasty_Nice </font><font face="Bookman Old Style" class="fsx04">will get less, and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Mary</font><font face="Bookman Old Style" class="fsx04">'s </font><font face="Bookman Old Style" class="fsx04" color="#006080">False_Honest</font><font face="Bookman Old Style" class="fsx04"> will get very little weight.<br><br></font><div align="left"><font face="Bookman Old Style"><hr><br></div></font><div align="center"><font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-c-01-operators.html">Operators</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-c-03-historybook-operators.html">HistoryBook Operators</a><br><br></div></font><div align="left"><font face="Bookman Old Style"><hr><br></font></div>
+</div>
+</div>
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

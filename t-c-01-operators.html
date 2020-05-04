@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Operators</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj206 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:65px;width:400px;height:71px;}
+#Oobj207 {position:absolute;z-index:2;visibility:visible;text-align:left;left:207px;top:124px;width:767px;height:2167px;background-color:#ffffff;border-width:6px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj194 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:2230px;width:728px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj206">
+<div id="Ggeo166" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Operators<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj207">
+<div id="Ggeo167" class="dfltt">
+<font face="Bookman Old Style" class="fsx04"><I>To get the most from these tutorials, follow the instructions on <a href="tutorials.html">downloading SWAT and joining the Authors' Guild</a> before you begin.&nbsp; </I><br>
+<br>
+<br>
+You can think about Operators in terms of language. Consider this sentence:<br>
+<br>
+"The farmer gave the dog that saved the life of his son a big slab of meat from the pig he had just slaughtered."<br>
+<br>
+OK, it's a clumsy sentence with too many subsidiary components; a good writer would break it down into several sentences. But it breaks down into words in exactly the same way that a Script breaks down into Operators:<br>
+<br>
+<B>gave</B><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <B>who:</B> The farmer<br>
+&nbsp;&nbsp;&nbsp;&nbsp; <B>to whom:</B> the dog<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that saved<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>what:</B> the life<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>of whom:</B> his son<br>
+&nbsp;&nbsp;&nbsp;&nbsp; <B>what:</B> the slab<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of meat<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from the pig<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that slaughtered<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>who: </B>he<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>when:</B> had just<br>
+<br>
+Granted, this is a rather odd way of breaking apart a sentence, but its utility arises from its defining the components of the sentence in a precise fashion. And when you're talking to computers, you have to be precise.<br>
+<br>
+This nesting capability of language gives it the power to express any idea, no matter how complex. And the scripting language of Storytronics uses exactly the same nesting concept for its Operators.<br>
+<br>
+<br>
+<B>Operator Types</B></font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">An Operator produces a value: a number, a </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">Prop</font><font face="Bookman Old Style" class="fsx04">, an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">, etc. There are three types of Operators: <ul>
+<li>Getters 
+<li>Setters 
+<li>Crunchers</ul><br>
+Getters are simple: they simply look up a stored value and return it. Here is an example of a Getter:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">Owner of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">ThisProp</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">When you use the Operator </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Owner of </font><font face="Bookman Old Style" class="fsx04">in a script, SWAT gets the name of the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> who owns the prop that has just been used in </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">ThisEvent</font><font face="Bookman Old Style" class="fsx04">, and plugs it into that slot in the script.<br>
+<br>
+Setters store a new value into a variable. They are represented by Script Buttons. The </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">'s Consequences, AssumeRoleIf, EmotionalReaction, </font><font face="Bookman Old Style" class="fsx04" color="#0080a0">WordSocket</font><font face="Bookman Old Style" class="fsx04">, and Inclination scripts are all Setters. The way you can recognize a Setter is by the bent corner on the button.<br>
+<br>
+<center><img src="http://www.storytron.com/Tutorial/images/t-c01-a.jpg" width="67" height="23"></center><br>
+<br>
+Crunchers perform some calculation using the values you feed them. Here is an example of a Cruncher:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">BSum of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Quiet_Chatty of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Fear_Anger of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">The Operator </font><font face="Bookman Old Style" class="fsx04">BSum</font><font face="Bookman Old Style" class="fsx04"> takes the number representing how talkative </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor </font><font face="Bookman Old Style" class="fsx04">is (that is, her </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">Quiet_Chatty</font><font face="Bookman Old Style" class="fsx04"> value), and adds to it the value representing how fearful or angry she is. This Operator might be used to determine how likely an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> is to speak her mind in a confrontation, for instance. The more angry she is, and/or the more outspoken she is, the more likely she will be to argue or confront.<br>
+<br>
+<br>
+<B>Nesting of Operators</B></font><br>
+<font face="Bookman Old Style" class="fsx04">Many Operators have arguments. "Arguments" is just a fancy name for subsidiary Operators that provide further specifics on what the Operator is required to do. Some Operators have just one argument, like these:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Quiet_Chatty of:&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; how loquacious </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> is<br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">(We indicate nesting by insetting the argument.)<br>
+<br>
+Other Operators have two arguments, like these:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">PQuiet_Chatty of:&nbsp; </font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; how loquacious </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04"> perceives </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><font face="Bookman Old Style" class="fsx04"> to be<br>
+&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Here's an example of nesting arguments:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">Quiet_Chatty of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Owner of:</font><br>
+<font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#ff00ff">ThisDirProp</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Some Operators have no arguments at all; here are a few:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04" color="#ff0000">BNumberConstant</font><font face="Bookman Old Style" class="fsx04">&nbsp; (a number like </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.0 </font><font face="Bookman Old Style" class="fsx04">or </font><font face="Bookman Old Style" class="fsx04" color="#ff0000">0.5</font><font face="Bookman Old Style" class="fsx04">)</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisSubject</font><font face="Bookman Old Style" class="fsx04">&nbsp;&nbsp; (the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Subject</font><font face="Bookman Old Style" class="fsx04"> of the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> that just happened)</font><br>
+<font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> (the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> reacting to the </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04"> that just happened)</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><hr></font><br>
+<font face="Bookman Old Style" class="fsx03">Previous tutorial (Group 2):&nbsp; <a href="t-b-07-lizards.html">Lizards</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="t-c-02-special-operators.html">Special Operators</a></font><br>
+<br>
+<font face="Bookman Old Style"><hr><br></font></div>
+</div>
+
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Storytron Tutorials - Scripting Exercise</title>
+<meta name="GENERATOR" content="Virtual Mechanics SiteSpinner V2 270f ">
+<meta http-equiv="imagetoolbar" content="false">
+
+<style type="text/css"><!--
+.fsx01 {font-size: 11px;}
+.fsx02 {font-size: 12px;}
+.fsx03 {font-size: 13px;}
+.fsx04 {font-size: 15px;}
+.fsx05 {font-size: 16px;}
+.fsx06 {font-size: 19px;}
+.fsx07 {font-size: 21px;}
+.fsx08 {font-size: 24px;}
+.fsx09 {font-size: 27px;}
+.fsx10 {font-size: 29px;}
+.fsx11 {font-size: 32px;}
+.fsx12 {font-size: 35px;}
+.fsx13 {font-size: 37px;}
+.fsx14 {font-size: 48px;}
+.fsx15 {font-size: 64px;}
+.fsx16 {font-size: 96px;}
+.txdec {text-decoration: none;}
+#centered{position:relative;width:984px;height:100%;margin:0px auto 0 auto;text-align:left;padding-left:1px;cursor:default}
+#Oobj17 {position:absolute;z-index:1;visibility:visible;text-align:left;left:395px;top:70px;width:400px;height:71px;}
+#Oobj19 {position:absolute;z-index:2;visibility:visible;text-align:left;left:208px;top:124px;width:765px;height:1603px;background-color:#ffffff;border-width:5px;border-style:solid;border-color:#ffffff;}
+#Oobj446 {position:absolute;z-index:3;visibility:visible;left:0px;top:2px;width:200px;height:147px;}
+#Oobj456 {position:absolute;z-index:4;visibility:visible;left:208px;top:-1px;width:775px;height:28px;}
+#Oobj457 {position:absolute;z-index:5;visibility:visible;text-align:left;left:220px;top:0px;width:741px;height:27px;}
+#Oobj459 {position:absolute;z-index:6;visibility:visible;left:208px;top:27px;width:775px;height:28px;}
+#Oobj46 {position:absolute;z-index:7;visibility:visible;text-align:left;left:222px;top:1643px;width:740px;height:185px;}
+
+input,textarea,select {color:#000000;font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;}
+.dfltt {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+.dfltc {font-family:'Times New Roman';font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;text-align:left;color:#000000;}
+body {margin:0px;text-align:center;height:100%;width:100%;}
+-->
+</style>
+</head> 
+
+<body bgcolor="#dec4a6" alink="#ff0000" link="#8c6756" vlink="#747474" >
+
+<div id="centered">
+<div id="Oobj17">
+<div id="Ggeo63" class="dfltt">
+<div align="center"><font face="Bookman Old Style" class="fsx06"><B>SWAT TUTORIAL<br>
+Scripting Exercise:&nbsp; AssumeRoleIf<br></B></font></div>
+</div>
+</div>
+
+<div id="Oobj19">
+<div id="Ggeo65" class="dfltt">
+<font face="Bookman Old Style" class="fsx04">The AssumeRoleIf script gets used a lot.&nbsp; For every </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">, the Engine uses AssumeRoleIf to test all the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> for the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Roles</font><font face="Bookman Old Style" class="fsx04"> to be filled in the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04">.&nbsp; </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Click once on the AssumeRoleIf button, right underneath the "Role" box. Once again you get an empty Script, but this time instead of a default number, you see this:<br>
+<br>
+<center><img src="http://www.storytron.com/Tutorial/images/t6-d.jpg" width="237" height="53"></center><br>
+<br>
+The word "<B>Condition?</B>" is </font><font face="Bookman Old Style" class="fsx04">what we call a <I>prompt</I>: its purpose is to prompt you to replace it with something, in this case,</font><font face="Bookman Old Style" class="fsx04"> the condition that will determine whether an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor </font><font face="Bookman Old Style" class="fsx04">assumes the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Role</font><font face="Bookman Old Style" class="fsx04">. </font><br>
+<font face="Bookman Old Style" class="fsx04">Note that this prompt is black. That's because the AssumeRoleIf Script is a yes-or-no Script (boolean), which we express as "true-or-false."</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Click on the Condition? prompt, and note that once again, some menus light up. Click on some of the menus you clicked on previously. Surprise! They show different menu items this time. That’s part of our "can't mix apples and oranges" protection system for you. After all, it would be nonsense for you to enter 0.5 for the Condition?, because 0.5 is not a boolean (true-or-false) value. It's just wrong here, so SWAT won't let you use it or anything else that wouldn't fit.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Let's go back to the original idea for the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> "</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">punchee</font><font face="Bookman Old Style" class="fsx04">." The </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">punchee</font><font face="Bookman Old Style" class="fsx04"> is the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> of the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> of this </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">. But we don't tell the Engine "The </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">punchee</font><font face="Bookman Old Style" class="fsx04"> is the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> of the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> of this </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">." Instead, we do it backwards. The Engine goes through each of the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> one at a time and asks the AssumeRoleIf Script, "Does this </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> fit your requirements?" We need to write an AssumeRoleIf Script that answers that question. The condition that we want is that the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> (whom we call the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">) is the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> of this </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">. </font><font face="Bookman Old Style" class="fsx04">(i.e., the one who was punched). </font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Make sure "Condition?" is still highlighted.&nbsp; (If you accidentally changed it, click on that top item and hit "delete" to go back to the "Condition?" prompt.)&nbsp; Click the large button below "delete" that says "AreSameActor."&nbsp; The condition changes to AreSameActor, and the "</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor1</font><font face="Bookman Old Style" class="fsx04">?" prompt is now highlighted.</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04">Select "</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">" (the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> who has assumed this </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">).&nbsp; The Engine will use the comparison Operator "AreSameActor" to test whether the current </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> meets the requirements for the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">.&nbsp; We're checking to find which "</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04">" is the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> of the </font><font face="Bookman Old Style" class="fsx04" color="#008000">Verb</font><font face="Bookman Old Style" class="fsx04"> "</font><font face="Bookman Old Style" class="fsx04" color="#008000">punch</font><font face="Bookman Old Style" class="fsx04">," so For "</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor2</font><font face="Bookman Old Style" class="fsx04">?" choose "</font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><font face="Bookman Old Style" class="fsx04">."<br>
+<br>
+Our script is done:</font><br>
+<br>
+<font face="Bookman Old Style" class="fsx04"><center><img src="http://www.storytron.com/Tutorial/images/t6-e.jpg" width="213" height="64"></center><br>
+<br>
+This means "Assume the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04"> if the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ReactingActor</font><font face="Bookman Old Style" class="fsx04"> and </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><font face="Bookman Old Style" class="fsx04"> are the same </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04">." <br>
+<br>
+Yes, it's a backwards way of saying it, but it still makes sense. If you're wondering, </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">ThisDirObject</font><font face="Bookman Old Style" class="fsx04"> means "the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">DirObject</font><font face="Bookman Old Style" class="fsx04"> of this </font><font face="Bookman Old Style" class="fsx04" color="#00c0ff">Event</font><font face="Bookman Old Style" class="fsx04">, the one we're reacting to."<br>
+<br>
+This backwards way of thinking is one of the most difficult concepts in SWAT. Instead of asking "Who should assume the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">?" we ask "What conditions specify whether an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> should assume the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">?" There's a reason for this backwardness: the conditions might demand none, one, or many </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04"> to fill the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">. If we phrase the question in the normal way, then the answer must be phrased like this:<br>
+<br>
+Who should fill the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">?&nbsp; </font><font face="Bookman Old Style" class="fsx04" color="#0000ff"><I>Joe</I></font><font face="Bookman Old Style" class="fsx04"><I> should fill the </I></font><font face="Bookman Old Style" class="fsx04" color="#0000ff"><I>Role</I></font><font face="Bookman Old Style" class="fsx04"><I>.</I><br>
+<br>
+That implies exactly one </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> to fill the </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">. But if we phrase the question in the backwards way, we can give a more complex answer:<br>
+<br>
+What conditions specify whether an </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> should fill this </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Role</font><font face="Bookman Old Style" class="fsx04">? <I>These conditions.</I><br>
+<br>
+Then we just try those conditions out on every </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actor</font><font face="Bookman Old Style" class="fsx04"> and see who ends up fitting those conditions, which could be none, one, or many </font><font face="Bookman Old Style" class="fsx04" color="#0000ff">Actors</font><font face="Bookman Old Style" class="fsx04">. <br>
+<br>
+Don't feel bad if this concept leaves you baffled at first; it really is counterintuitive. It will take a while before you feel comfortable with it. But with practice, it sinks in and pretty soon backwards thinking you comfortable with will be. In the next lesson, we'll be using this kind of backwards thinking more broadly. <br>
+<br>
+<hr><br></font><div align="center"><font face="Bookman Old Style" class="fsx03">Previous tutorial:&nbsp; <a href="t-a-05-scripting-basics.html">Scripting Basics</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next tutorial:&nbsp; <a href="http://www.storytron.com/Tutorial/t-a-07-acceptable-desirable.html">Acceptable and Desirable</a><br><br></div></font><div align="left"><font face="Bookman Old Style" class="fsx04"><hr><br></font></div>
+</div>
+</div>
+</body> 
+</html> 
+
+<!-- Localized -->
